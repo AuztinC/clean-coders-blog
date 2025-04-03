@@ -14,7 +14,7 @@ ul{
 
 li{
   padding: 15px;
-  white-space: pre-line;
+  white-space: pre-wrap;
   border: 1px solid black;
   background-color:rgb(230, 230, 230);
   margin-top: 10px;
