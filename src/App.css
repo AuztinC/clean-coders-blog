@@ -9,7 +9,7 @@ body{
 ul{
   padding-left: 20px;
   width: 80vw;
-  list-style: circle;
+  list-style: none;
 }
 
 li{
