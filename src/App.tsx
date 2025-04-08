@@ -1,25 +1,30 @@
 import './App.css'
+import {useEffect, useState} from 'react'
 import blogPosts from './BlogPosts'
+import SinglePost from './SinglePost'
+import { Routes, Route, Link } from 'react-router'
 
 function App() {
 
-  return (
-    <>
-    {blogPosts ? 
-    <ul>
-      {blogPosts.map((post, idx)=>(
-        <li key={idx}>
-          <span>{post.title} </span>
-          <br />
-          <span>{post.date} </span>
-          <br />
-          <span>{post.blog} </span>
-        </li>
-      ))}
-    </ul>
-       : null}
-    </>
-  )
+  const [postDate, setPostDate] = useState<String>()
+
+
+
+  return (<>
+      {blogPosts ?
+          <ul>
+            {blogPosts.map((post, idx)=>(
+              <li key={idx}>
+                <Link to={`/${post.date}`} onClick={()=>setPostDate(post.date)}>{post.date}</Link>
+              </li>
+            ))}
+          </ul>
+     : null}
+
+       <Routes>
+        <Route path={"/:date"} element={<SinglePost/>} />
+       </Routes>
+   </>)
 }
 
 export default App

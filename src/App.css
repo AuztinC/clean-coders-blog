@@ -8,15 +8,29 @@ body{
 
 ul{
   padding-left: 20px;
-  width: 80vw;
+  width: 100vw;
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 li{
+  text-align: center;
+  width: 30%;
   padding: 15px;
   white-space: pre-wrap;
   border: 1px solid black;
   background-color:rgb(230, 230, 230);
   margin-top: 10px;
+}
+.blogPost {
+
+  margin: 5%;
+  padding: 15px;
+  white-space: pre-wrap;
+  border: 1px solid black;
+  background-color:rgb(230, 230, 230);
 }
 
