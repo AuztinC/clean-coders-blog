@@ -1,12 +1,12 @@
 import './App.css'
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
 import blogPosts from './BlogPosts'
 import SinglePost from './SinglePost'
 import { Routes, Route, Link } from 'react-router'
 
 function App() {
 
-  const [postDate, setPostDate] = useState<String>()
+ // const [postDate, setPostDate] = useState<String>()
 
 
 
@@ -15,7 +15,7 @@ function App() {
           <ul>
             {blogPosts.map((post, idx)=>(
               <li key={idx}>
-                <Link to={`/${post.date}`} onClick={()=>setPostDate(post.date)}>{post.date}</Link>
+                <Link to={`/${post.date}`}>{post.date}</Link>
               </li>
             ))}
           </ul>
