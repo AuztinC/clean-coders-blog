@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './App.css'
 //import {useState} from 'react'
 import blogPosts from './BlogPosts'
@@ -8,7 +9,9 @@ function App() {
 
  // const [postDate, setPostDate] = useState<String>()
 
+useEffect(()=>{
 
+})
 
   return (<>
       {blogPosts ?
