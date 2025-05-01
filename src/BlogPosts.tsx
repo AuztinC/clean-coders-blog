@@ -93,6 +93,11 @@ const blogPosts = [
     blog: "\t Refactoring is all of the time, never ignore it. Never put it on a schedule. I need to recite this more often to myself as I am building out a solution. Follow the three laws of test-driven development, one: 'You're not allowed to write any production code until  you have a failing test.', two: 'Stop writing the test as soon as it fials, even if its a compiler error.', and finally 'Stop writing the production code as soon as the test passes.' These are essential to building out a solution incrementally without getting stuck in the mud. Play code golf and try to make a test pass with as few keystrokes as possible, have fun with the process. \n\n\t Getting to refactor with Alex has been eye-opening, yet again. As I am growing with clojure I am sure that these solutions will come to me easier, but as of now they are hard to see. When creating programs I need to search for more solutions that my typical javascript-way of doing things. Clojure can be clean and way more readable and I need to take advantage of that. \n\n\t Grateful to have gotten the help again today and thankful for my Mentor Alex!",
     date: "4-29-2025"
   },
+    {
+    title: "Getting the rythm",
+    blog: "\t Coming out of my fifth Iterative meeting I am feeling more confident in my ability to complete tasks. I am working on my presentation for the Liskov Substitution Principle and am sort of struggling to come up with ideas that fully make sense for code examples. I want my presentations to have some sort of new way to visualize the problem at least and not just the same old examples that I'm sure all of the craftsman have seen from every new apprenctice. \n\n\t Getting to improve my tic-tac-toe is an exciting story for the week, I look forward to having a fully working game with playable options. I will need to work on my kata a lot tomorrow because I got so caught up in the presentation that I did not jump into that yet. Building minimax again in clojure was a challenge in itself, but now building upon that idea will be easier since I now have a much better grasp of using recursion in the language. \n\n\t Tomorrow I will work hard to complete this and at least two other tasks for my week. ",
+    date: "4-30-2025"
+  },
     // {
   //   title: "",
   //   blog: "\t ",
