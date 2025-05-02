@@ -98,6 +98,11 @@ const blogPosts = [
     blog: "\t Coming out of my fifth Iterative meeting I am feeling more confident in my ability to complete tasks. I am working on my presentation for the Liskov Substitution Principle and am sort of struggling to come up with ideas that fully make sense for code examples. I want my presentations to have some sort of new way to visualize the problem at least and not just the same old examples that I'm sure all of the craftsman have seen from every new apprenctice. \n\n\t Getting to improve my tic-tac-toe is an exciting story for the week, I look forward to having a fully working game with playable options. I will need to work on my kata a lot tomorrow because I got so caught up in the presentation that I did not jump into that yet. Building minimax again in clojure was a challenge in itself, but now building upon that idea will be easier since I now have a much better grasp of using recursion in the language. \n\n\t Tomorrow I will work hard to complete this and at least two other tasks for my week. ",
     date: "4-30-2025"
   },
+    {
+    title: "Clean Tests",
+    blog: "\t Testing a problem out is becoming a go to habit when looking at a problem now and that's great. When it comes to implementing these tests I am definitely in need of practice. The building of tests with multiple layers of set up functions is still a big concept for my tiny testing brain. But as Uncle Bob tells us, start small with a degenerate test and a problem to solve, incrementaly work you way towards the goal one green test at a time. \n\n\t Arrange, Act, Assert! Well, that was the way. Then along comes another A! Annihilate, or to destroy the left over effects of a test. I'm happy to learning more about the ideas of creating useful and modular testing and look forward to being a master at utilizing them. Using transient fresh fixtures whenever possible, and keeping teardowns to a minimum. ",
+    date: "5-1-2025"
+  },
     // {
   //   title: "",
   //   blog: "\t ",
