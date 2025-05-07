@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react"
 import blogPosts from "./BlogPosts"
-import { useParams } from "react-router"
+// import { useParams } from "react-router"
+
+interface Props {
+  date: String
+}
 
 interface Post {
     title: String,
@@ -8,16 +12,15 @@ interface Post {
     blog: String,
 }
 
-export default function SinglePost () {
-    const { date } = useParams()
+export default function SinglePost (props: Props) {
+    // const { date } = useParams()
     const [singlePost, setSinglePost] = useState<Post>()
 
     useEffect(()=> {
-        console.log(typeof date)
         setSinglePost(
-          blogPosts.filter((el)=>el.date == date)[0]
+          blogPosts.filter((el)=>el.date == props.date)[0]
         )
-      }, [date])
+      }, [props.date])
 
       if(!singlePost)return
 

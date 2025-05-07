@@ -1,33 +1,43 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-//import {useState} from 'react'
 import blogPosts from './BlogPosts'
 import SinglePost from './SinglePost'
-import { Routes, Route, Link } from 'react-router'
+// import { Routes, Route, Link } from 'react-router'
+
+interface Post {
+  title: String,
+  date: String,
+  blog: String,
+}
 
 function App() {
 
- // const [postDate, setPostDate] = useState<String>()
+const [singlePostDate, setSinglePostDate] = useState<String>("")
+const [posts, setPosts] = useState<Post[]>([])
 
 useEffect(()=>{
+  setPosts(blogPosts.reverse())
+}, [blogPosts])
 
-})
-
-  return (<>
-      {blogPosts ?
-          <ul>
-            {blogPosts.map((post, idx)=>(
-              <li key={idx}>
-                <Link to={`/${post.date}`}>{post.date}</Link>
-              </li>
-            ))}
-          </ul>
+  return (<div className='wrapper'>
+      {posts ?
+        <ul>
+          {posts.map((post, idx)=>(
+            <li onClick={()=>setSinglePostDate(post.date)} key={idx}>
+              {post.date}
+            </li>
+          ))}
+        </ul>
      : null}
 
-       <Routes>
+     {singlePostDate ?
+        <SinglePost date={singlePostDate}/>
+    : null}
+
+       {/* <Routes>
         <Route path={"/:date"} element={<SinglePost/>} />
-       </Routes>
-   </>)
+       </Routes> */}
+   </div>)
 }
 
 export default App
