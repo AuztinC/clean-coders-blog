@@ -123,6 +123,11 @@ const blogPosts = [
     blog: "\t The Test-driven development mindset is a discipline. At the start of my journey, the idea of using TDD was really an easy sell. The eulers are fantastic small problems to get the idea of TDD flowing. However, when I stepped up the project to a larger scale and also it being a project that I knew what direction I wanted to go, I ignored the process. Not purposefuly but blind haste I hurried through getting my ideas out. \n\n\t Watching the Mocking videos was a great way to understand the different ways to test projects more thoroughly. Also getting to have help with this process in tic-tac-toe has been helpful. Using a combination of with-in-str and with-out-str and then stubbing out a function. \n\n\t Getting to get a glance into a GUI framework today was an exciting moment. I am thrilled to jump into Quil and work on the game of life kata. Using a canvas is a fun way to draw graphics with javascript and Quil looks to be very similar so there will be some familiarity. It looks like it might even be set up to be easier to get started. ",
     date: "5-7-2025"
   },
+      {
+    title: "To Refactor, Or To Transform?",
+    blog: "\t The twelve transformation that are small changes within your code that will alter the behavior in a specific way. The priority of these behaviors matters and should be used with the highest of available priority transformations to be used in a situation. Watching Uncle Bob solve the example problem and ending up with two different sorting algorithms as a result was a shocking thing to see. Just by adding a computation to a new variable rather than assigning to an existing state, the speed of the algorithm improved by miles! \n\n\t Getting to get a better look at how to properly stub a functions behavior today was great. The ability to check the invokation of a function and spy to see the about of calls. This is very exciting to see the tools used in the language I am actively trying to learn. \n\n\t Ready to present the Interface Segregation Principle tomorrow!",
+    date: "5-8-2025"
+  },
       // {
   //   title: "",
   //   blog: "\t ",
