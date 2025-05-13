@@ -138,11 +138,11 @@ const blogPosts = [
     blog: "\t Everyday I see something new in clojure or understand something about the language that makes me so excited. Today I used my first multi-method while adding the new game modes to my tic-tac-toe project. While doing my research for the presentations I keep seeing these sort of methods coming up and have been itching to find a use. \n\n\t During this whole project I have noticed that I tend rush through a problem. The act of doing test-driven development will be a discipline for me to actively work at every day I am writing code. Today I slowed down a bit and thought my tests out, starting with a function that will, similarly to the select-game function, allow a user to select a difficulty. This function has a responder function for the :else case that will let you re-try your selection. This came together with tests for things like 'prints-options', 'retries for bad input', and then moving to checking for return values. \n\n\t Doing these sort of tests along the way left me with a well tested set of functions that I felt comfortable refactoring. Adding a few more tests in my code for some missed opportunities for better tested code. A great day of learning how to refactor and properly test my code.",
     date: "5-12-2025"
   },
-      // {
-  //   title: "",
-  //   blog: "\t ",
-  //   date: "-2025"
-  // },
+      {
+    title: "The power of the stub",
+    blog: "\t Looking back through my tic-tac-toe code today ended with me having a better coverage of tests. At the beginning of this project I really had no idea how to properly test anything behond should= which if very limiting. With better insight on some of the capabilities, I am continuing to find pieces of code that I could have tested my way towards the first time. These are valuable lessons that I hope to be more thoughtful about next time. \n\n\t Moving code into new namespaces was a great way to see some of these tests that needed to be implemented. Doing this resulted in a list of modules such as ai_turn, board, game_options, human_turn, init_game, and printer. These come with their own specs accordingly and each test file imports their direct testing file as 'sut' to signify which functions are the ones being tested, and which are used for utility and being tested elsewhere. \n\n\t Meeting with Scoops was an informative insight to my lack of though about what is going into each module. Each module should only have functions pertaining to that modules use. Creating a 'ai-util' module which in reality was holding mostly the actions pertaining to the board itself, thus prompted a re-arrange and re-name! \n\n\t After meeting with the other apprentices for a while today I was left with a euphoric feeling that I am in the right place. Looking forward to my IPM with Micah tomorrow to see what he thinks of my refactor. Did I over extend my namespaces? We shall see!",
+    date: "5-13-2025"
+  },
 ]
 
 export default blogPosts
