@@ -168,11 +168,16 @@ const blogPosts = [
     blog: "\t Even faster today! My little project has grown into quite the impressive display. It is truly motivating every time I find a new way to solve a problem. The fact that there is always a new technique you might not have thought of makes me want to re think all of my previous work! When I first case accross alpha beta pruning I was not sure how I would fit it into my minimax as it sat. During my last IPM meeting with Micah, I was suggested to switch the heart of my minimax to a reduce function, which was a great way to clean the space up. After a while of pondering if I could remain with such a structure, I decided to switch back to a loop system. Needing to be able to keep track of multiple changing variables, It felt like the right choice. \n\nt The system starts in a similar way as before, setting the best score to an extreme and getting the new positions and board. Then we introduce our alpha and beta variables and set these along the way of each recurse. These are set to the min and max accordingly, eventually resulting in the check of weather our alpha has found a better spot than the opponent could at this point and take the spot. \n\n\t Doing this improved the ability of the ai in a 4x4 board environment by a large margin. It was still a bit slow on the first couple of moves however, taking ~4 seconds to initiate its move. Adding a best-early-move to the system which prefers corners and middle for the first 4 moves of the game allows a offensive start for the computer player and skips the long first couple moves. \n\n\t The system is fast and I am excited to see what my mentor and Micah think of the progress tomorrow at IPM. ",
     date: "5-20-2025"
   },
-  // {
-  //   title: "",
-  //   blog: "\t",
-  //   date: "-2025"
-  // },
+  {
+    title: "Disco IPM",
+    blog: "\t Another really great meeting with my mentor Alex and Micah during my iterative meeting. I really am thrilled to get such positive feedback on any aspect of my projects. Working through the problem while trying to find the simplest solution really paid off. Unfortunately I did not have a full test suit to back this up, as was pointed out during the meeting. Looking back I must acknowledge my flaws in my work. There is a needless test counting the neighbors of a cell, while none of my future code relies on their being 8 neighbors. The update state function is built fully out with no testing on the different functions that are built within the update itself. \n\n\t I am grateful for the feeback and ready to make progess on my new features for my tic-tac-toe! The problems are ramping up and becoming problems that I have wanted to solve for a long time. Saving to a file and restarting a game in progress is a really exciting thing to me so I can't wait to implement it!",
+    date: "5-21-2025"
+  },
+  {
+    title: "Design Patterns, Which to present!?",
+    blog: "\t After my meeting yesterday, I was ready to dive into my presentation that I will present during lunch and learn tomorrow. This presentation was a bit more challenging to put together in a timely manner, as I wasn't aware of just how many design patterns there really are! Spending time going through each one in multiple example cases was more time consuming than expected, however it did result in me thinking about multiple ways that I could go back and refactor my tic-tac-toe game. \n\n\t Eventually deciding on the Template Design Pattern to present and looking for examples within my own work to relate the pattern to better. I found a place that my code was voilating this pattern and a simple refactor made a great example of what the pattern can help prevent. \n\n\t Learning about edn files and how to read/write was a really exciting adventure! Going into the problem, I decided to create the file and found a simple documentation walking through the basics, then it was off to the races with implementing the ability to \"split\" at the file and save my game one move at a time. This came together quicker than I had anticipated, which was a relief. \n\n\t Today felt like a big day of making good progress with totally new ideas, and I loved it! Another awesome day as a Clean Coders apprentice!",
+    date: "5-22-2025"
+  },
 ]
 
 export default blogPosts
