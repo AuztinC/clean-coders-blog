@@ -181,10 +181,14 @@ const blogPosts = [
   {title: "Youtube Star",
     blog: "\t Once I have graduated from my apprenticeship I will have a Youtube career to go along side my craftsmanship! Listening to the feedback from my meeting this week, I decided to change my testing strategy going into the Game of Life kata. Instead of worrying about how many neighbors a cell has, why not start with a single neighbor check? I asked myself this and then typed out a test. This allowed me to get that neighbor with single coordinates. A test like this allowed me to read for all of my neighbors and count the active cells, or those with a value of 1. \n\n\t Adding tests that forced me to write functions that would be involed in the final reduce to change the boards state, instead of refactoring one giant function out after writing the whole thing. It was a more satisfying ending result, as it only took one small reduce to handle the big game. \n\n\t The little game that could! Tic-tac-toe is evolving daily. Yesterday I update to restore the current game being played if you are disconnected from your terminal, today I add a third dimention to the system! Getting a good grasp on my direction for the start of this feature took me some time to decide on. Ultimately, the terminal gui is always in 2d. So I thought; why force 3d style of printing if we can focus on making the logic of the game conform to the larger world. So far, I have a gui that I believe looks nice and will be able to be integrated in my already existing processes. \n\n\t This was a great Friday with a fun lunch and learn of bonding. I am looking forward to my birthday tomorrow and then getting back to building the logic for the ultimate form (maybe) of my tic-tac-toe!",
     date: "5-23-25"
-  }
+  },
+  {title: "Heuristics",
+    blog: "\t Approaching the 3d version of tic-tac-toe was very intimidating. Knowing that minimax will only work up to a certain depth had me jumping to solve this with heuristics. Thinking about what the AI player will need, I started with a win/block check function that would allow the AI to snap to block when you are set up for a winning move. This was a promising start that lead me to building other systems that will score the game differently, based on how many spots a given player has filled, where a two in a row has a higher value than one. This problem is very challenging due to the forks. I have made a function that will check if the opponent has a chance to place into a position. This is only looking one turn ahead right now and leading me to be able to win if I am the starting player. The AI will not let me win if it starts the game, always resulting in a tie or the AI winning. After playing with depth for minimax and trying different fork ideas, I have run into a wall. The idea of creating a heuristic based AI is working, I just can't land the finishing touch and am finding myself going in circles in my code. Tomorrow is a new opportunity to solve this problem and I greatly look forward to the feeling when it is solved.",
+    date: "5-27-25"
+  },
   // {title: "",
   //   blog: "\t ",
-  //   date: "-5-25"
+  //   date: "-25"
   // }
 ]
 
