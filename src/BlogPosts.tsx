@@ -186,10 +186,18 @@ const blogPosts = [
     blog: "\t Approaching the 3d version of tic-tac-toe was very intimidating. Knowing that minimax will only work up to a certain depth had me jumping to solve this with heuristics. Thinking about what the AI player will need, I started with a win/block check function that would allow the AI to snap to block when you are set up for a winning move. This was a promising start that lead me to building other systems that will score the game differently, based on how many spots a given player has filled, where a two in a row has a higher value than one. This problem is very challenging due to the forks. I have made a function that will check if the opponent has a chance to place into a position. This is only looking one turn ahead right now and leading me to be able to win if I am the starting player. The AI will not let me win if it starts the game, always resulting in a tie or the AI winning. After playing with depth for minimax and trying different fork ideas, I have run into a wall. The idea of creating a heuristic based AI is working, I just can't land the finishing touch and am finding myself going in circles in my code. Tomorrow is a new opportunity to solve this problem and I greatly look forward to the feeling when it is solved.",
     date: "5-27-25"
   },
+  {title: "Iterate and meditate",
+    blog: "\t After meeting with my clients for my iterative meeting, I left slightly deflated. Dropping the ball on testing some of the core functionality of my reading/writing to edn was a wake up that I need to make a couple of changes. Using my production project for testing things like reading and writing was a mistake. It made me fail to write the tests that should have lead me to properly implementing this feature. \n\n\t Thankfully, I have a great mentor who has been extremely patient and helpful about these things. Getting to pair after the meeting and work through how some of the tests should have been written was very helpful and insightful. Being able to trust a core function is a must, so why not be able to stub its functionality out? I was overthinking this process when trying to write tests that fit my already working code, when it should have been the other way around anyways. Not only was he a major help for understanding how to properly stub those functions but also with some of the ideas of state flow and usage of parameterizing the storage service used. \n\n\t Getting into Java only slightly was a really fun change for the end of the day today. I was able to get a project running with my own class running a 'Hello World'. Tomorrow I will look into how to properly set up tests so I can begin practicing my bowling kata in a new language! Very grateful for another meeting with my clients that ended in a positive. ",
+    date: "5-28-25"
+  },
+  {title: "Lets go bowling! Again.",
+    blog: "\t Learning about testing in Java today went really well. After spending a small amount of time researching my options I came accross Junit and was able to have IntelliJ download and import everything necessary into my project. Getting my tests up and running was no problem after I got Junit added into my run/debug configurations. This was fantastic progress and allowed me to write my very first test! \n\n\t Excited and filled with confidence I moved forward with my bowling kata, creating a test that would force me to create a Game class. Java and IntelliJ make this incredibly easy to do if a name is not recognized. Being able to whip up new class files and methods, fields, or anything else you need inside of it so quickly is very fun and makes me feel like I'm doing a lot even when I was only getting a single test going.",
+    date: "5-29-25"
+  },
   // {title: "",
   //   blog: "\t ",
   //   date: "-25"
-  // }
+  // },
 ]
 
 export default blogPosts
