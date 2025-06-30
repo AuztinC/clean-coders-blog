@@ -274,10 +274,10 @@ const blogPosts = [
     blog: "\t The Decorator Design Pattern is a great pattern to keep in mind when working in a functional programming space. This pattern gives us developers a way of building behavior on top of a previous class or interface without going into the code of that object and changing anything. The idea is based on stacking the new functionality together. Creating 'wrappers' that will enhance the previous version of whatever object you had started with. This comes with some caveats that could end up introducing new barriers in the future of your program. If this system isn't designed properly it could be a challenge to remove the layers of a wrapped object. \n\n\t The design pattern does help us follow some SOLID principles like the Single Responsibility and Open/Closed principles. Allowing each new wrapper to focus on a specific behavior ensures SRP is followed and by continuing to build on the original object we are extending its behavior without ever touching the source code. ",
     date: "6-26-25"
   },
-  // {title: "",
-  //   blog: "\t ",
-  //   date: "-25"
-  // },
+  {title: "Holy Canalee",
+    blog: "\t Being un-able to present my Decorator Design Pattern today was a little bit of a disappointment. Losing a crown on a tooth is scary, so I had to get an appointment set up asap this morning which left me away from my desk during lunch and learn. This was handled promptly and allowed me to make it back with a little time to spare of the day. \n\n\t Working through the new tests for the re-design of my postgres tables has been a really fun and enlightening process. I am thankful for getting to spend time talking about how these tables should look and how to create the relationship between a game and the moves for a given game. While I had previous postgres experience, it has admittedly been a long time since I have had to implement any relationships between tables. \n\n\t Switching my tests from using a 'test' database to stubbing out all of the db functions was another good lesson. Not only to see the multiple ways that tests like this can be written, but to get to hear how Micah and Alex think about these things was benificial as well. At this point I have don't most of my new tests for postgres with only a couple left to do. \n\n\t After last week, I am grateful for a week of refactoring. The pressure of the full GUI and a database refactor was a lot. This time I have only a couple of things left in my GUI logic and this refactor is shaping up nicely. \n\n\t I'm very happy to be on this team and can't wait to find out what my next project will be based on.",
+    date: "6-27-25"
+  },
   // {title: "",
   //   blog: "\t ",
   //   date: "-25"
