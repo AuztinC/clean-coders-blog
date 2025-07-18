@@ -323,12 +323,12 @@ const blogPosts = [
     blog: "\t Today marked a big shift—from parsing requests to actually serving files. It finally feels like my HTTP server is becoming a real server. Using java.nio, I figured out how to send files back in the response body, along with the correct Content-Type and other headers like Content-Length. Getting those headers right was satisfying—it made the communication feel complete, not just some hacked-together protocol parsing. \n\t Another big win was tying the test suite to my compiled .jar file. Now I can build the project and run the specs cleanly against the latest version of the server. It’s a small thing, but being able to hit build and see some specs pass gives me real confidence that I’m heading in the right direction. \n\t I still feel the weight of trying to adhere to the principles behind clean code and good architecture, especially in a language that isn’t second nature to me yet. But today was a good day. My server responded, and so did my motivation.",
     date: "7-15-25"
   },
-  {title: "",
-    blog: "\t ",
+  {title: "Delivering",
+    blog: "\t Coming out of IPM I was fairly crushed after spending so long iterating on ideas to force the concepts to sink in. The project was a lot of work in itself, and the when the ideas are new as well as the language it is a big challenge to produce anything of quality. After the meeting I had to take a walk and when I came back I put my head down and got to work. Writing tests that lead me to fixing my previous root problem. The GET /form route with query params came next. This was fairly simple to solve by splitting the request path into a map with key=value pairs.",
     date: "7-16-25"
   },
-  {title: "",
-    blog: "\t ",
+  {title: "Multipart",
+    blog: "\t A multipart POST request was at the top of the spec list today. This was a big challenge. This was my first step into accepting a POST so I didn't even have checks for it. Deciding to focus on the multipart form data aspect, I start my check for that value in the content type. Once I am inside of the call, I needed to parse the body and remove the boundaries and hyphens. After a long time of messing with parsers and finding the exact combination of map, filters and substrings; I was able to achieve victory. Then came building the html page and pulling out the information itself. A really big boost to my motivation after the rough meeting yesterday. \n\n\t Todays work was a big challenge and took me working late into the afternoon. It came with understanding some new concepts like boundaries, multipart/form-data, and Content-Disposition. ",
     date: "7-17-25"
   },
   // },
