@@ -347,6 +347,10 @@ const blogPosts = [
     blog: "\t Refactoring my entire ClientHandler class to rely solely on the handlers for each route was incredibly satisfying. Removing the huge violation that this class was making against the Single Responsibility by allowing it to truly 'handle' the passing of data to the correct route. Using a map lets us attach a route string, such as '/hello' to a handler class that implements the same handle interface. After noticing a bug in this system however, when checking these routes by key. I was using a .startsWith() function that would allow a route like '/hello.pdf' to take you to the '/hello' route displaying an html page. This bug was fixed by using regular expressions and the .matches() function instead. A huge win overall that will continue to be perfected.",
     date: "7-23-25"
   },
+  {title: "Proxies",
+    blog: "\t How do we authenticate a user? What about making our website fast even though it will be loading in some high resolution images? This and many more applications are call for a proxy. An intermediary that is helpful for capturing information about a request or deciding weather the request should even be granted! \n\n\t As mentioned previously, a proxy can be used for multiple purposes, some of the general examples would be a virtual proxy that is good for lazy loading images, a remove proxy that can help a remote system appear local, or a logging proxy that is helpful to capture history or counts of the request.",
+    date: "7-24-25"
+  },
   // {title: "",
   //   blog: "\t ",
   //   date: "-25"
