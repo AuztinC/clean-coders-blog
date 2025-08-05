@@ -4,7 +4,7 @@ export default function TicTacToe() {
     <div>
       {/* <h2>Tic-Tac-Toe Game</h2> */}
       <iframe 
-        src="src/public/index.html"
+        src="ttt/index.html"
         title="Tic-Tac-Toe Game"
       />
     </div>

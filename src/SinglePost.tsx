@@ -29,7 +29,7 @@ export default function SinglePost (props: Props) {
                 <h1>{singlePost.title}</h1> <br/>
                 {singlePost.date}  <br/>
                 {singlePost.blog}
-                {/* <TicTacToe/> */}
+                <TicTacToe/>
             </div>
             </>)
     }
