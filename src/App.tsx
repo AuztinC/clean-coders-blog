@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import blogPosts from './BlogPosts'
 import SinglePost from './SinglePost'
-import TicTacToe from './TTT'
+// import TicTacToe from './TTT'
 // import { Routes, Route, Link } from 'react-router'
 
 interface Post {
