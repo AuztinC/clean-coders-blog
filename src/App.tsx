@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import blogPosts from './BlogPosts'
 import SinglePost from './SinglePost'
+import TicTacToe from './TTT'
 // import { Routes, Route, Link } from 'react-router'
 
 interface Post {
@@ -20,6 +21,7 @@ useEffect(()=>{
 }, [blogPosts])
 
   return (<div className='wrapper'>
+
       {posts ?
         <ul>
           {posts.map((post, idx)=>(
@@ -37,6 +39,7 @@ useEffect(()=>{
        {/* <Routes>
         <Route path={"/:date"} element={<SinglePost/>} />
        </Routes> */}
+
    </div>)
 }
 

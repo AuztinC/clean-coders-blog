@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import blogPosts from "./BlogPosts"
+import TicTacToe from "./TTT"
 // import { useParams } from "react-router"
 
 interface Props {
@@ -24,9 +25,11 @@ export default function SinglePost (props: Props) {
 
       if(!singlePost)return
 
-    return (<div className="blogPost">
-                {singlePost.title} <br/>
+    return (<><div className="blogPost">
+                <h1>{singlePost.title}</h1> <br/>
                 {singlePost.date}  <br/>
                 {singlePost.blog}
-            </div>)
+                <TicTacToe/>
+            </div>
+            </>)
     }

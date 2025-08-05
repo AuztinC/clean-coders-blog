@@ -375,10 +375,10 @@ const blogPosts = [
     blog: "\t It is important to understand how cljs and cljs files can interact with eachother. Building a full project in clj files gives you access to the core clojure functions, as well as the interop of java functions. This isn't possible in a cljs file, these files are made with javascript as the langauge to be compiled into. Making a full stack application requires this sort of behavior from clojure. Being able to fully render a page as an index.html file is essential. But clojure is built on and compiles into java. \n\n\t Okay, so we have these two different interop's, but how do let them communicate. Thankfully an environment can be set up to handle this problem. Using cljc as a layer between clj and cljs allows for core functions to be accessed from clj into cljs through a cljc file. The trick to this is abstractions and keeping any java interop out of cljc. Using core logic in cljc files and pulling that logic into either of the other two. \n\n\t Understanding this seperation and finally getting to see some html be rendered while still using my projects core code has been very exciting. Using wire to create some tests that use clicks on buttons and targets elements by Id is so powerful and a fun way to develop an html page!",
     date: "8-1-25"
   },
-  // {title: "",
-  //   blog: "\t ",
-  //   date: "-25"
-  // },
+  {title: "",
+    blog: "\t ",
+    date: "-25",
+  },
 ]
 
 export default blogPosts
