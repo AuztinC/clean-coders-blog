@@ -379,6 +379,11 @@ const blogPosts = [
     blog: "\t Watching my little tic tac toe evolve into the monster project it feels like it has become, relatively speaking; has been an amazing journey. I have learned so much about designing clean clode through trial and failure. While the journey is not over I feel it can be good to reflect. \n\n\t My repetitive functions have been sticking out, the need to refactor is there. I am noticing how hard it can be, though, to go back while you are already on a deadline to get the next feature out. \n\n\t Getting through the game-over screen today was great. I am getting to take more time to explore testing with hiccup and wire. The ability to test all functionality of an html element is super fun. CSS is even included, although I found for me, it is only if you use inline style with your hiccup elements. ",
     date: "8-4-25",
   },
+  {
+    title: "Let's Play Tic Tac Toe!",
+    blog: "Step right up! Play a game, here! Can you 'Tic' the almighty 'Tac'!? Only 'Toe' can tell.",
+    date: "8-5-25"
+  }
 ]
 
 export default blogPosts
