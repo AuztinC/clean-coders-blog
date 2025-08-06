@@ -11,63 +11,63 @@ var response__$1 = c3kit.apron.schema.conform.call(null,c3kit.wire.apic.response
 if(c3kit.apron.schema.error_QMARK_.call(null,response__$1)){
 taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"error","error",-978969032),"c3kit.wire.apic",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Failed to conform response."], null);
-}),null)),null,(74),null);
+}),null)),null,(47),null);
 
-var seq__22169_22190 = cljs.core.seq.call(null,c3kit.apron.schema.messages.call(null,response__$1));
-var chunk__22170_22192 = null;
-var count__22171_22193 = (0);
-var i__22172_22194 = (0);
+var seq__15004_15008 = cljs.core.seq.call(null,c3kit.apron.schema.messages.call(null,response__$1));
+var chunk__15005_15009 = null;
+var count__15006_15010 = (0);
+var i__15007_15011 = (0);
 while(true){
-if((i__22172_22194 < count__22171_22193)){
-var message_22204 = cljs.core._nth.call(null,chunk__22170_22192,i__22172_22194);
-taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"error","error",-978969032),"c3kit.wire.apic",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay(((function (seq__22169_22190,chunk__22170_22192,count__22171_22193,i__22172_22194,message_22204,response__$1){
+if((i__15007_15011 < count__15006_15010)){
+var message_15012 = cljs.core._nth.call(null,chunk__15005_15009,i__15007_15011);
+taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"error","error",-978969032),"c3kit.wire.apic",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay(((function (seq__15004_15008,chunk__15005_15009,count__15006_15010,i__15007_15011,message_15012,response__$1){
 return (function (){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [message_22204], null);
-});})(seq__22169_22190,chunk__22170_22192,count__22171_22193,i__22172_22194,message_22204,response__$1))
-,null)),null,(77),null);
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [message_15012], null);
+});})(seq__15004_15008,chunk__15005_15009,count__15006_15010,i__15007_15011,message_15012,response__$1))
+,null)),null,(50),null);
 
 
-var G__22207 = seq__22169_22190;
-var G__22208 = chunk__22170_22192;
-var G__22209 = count__22171_22193;
-var G__22210 = (i__22172_22194 + (1));
-seq__22169_22190 = G__22207;
-chunk__22170_22192 = G__22208;
-count__22171_22193 = G__22209;
-i__22172_22194 = G__22210;
+var G__15013 = seq__15004_15008;
+var G__15014 = chunk__15005_15009;
+var G__15015 = count__15006_15010;
+var G__15016 = (i__15007_15011 + (1));
+seq__15004_15008 = G__15013;
+chunk__15005_15009 = G__15014;
+count__15006_15010 = G__15015;
+i__15007_15011 = G__15016;
 continue;
 } else {
-var temp__5825__auto___22211 = cljs.core.seq.call(null,seq__22169_22190);
-if(temp__5825__auto___22211){
-var seq__22169_22212__$1 = temp__5825__auto___22211;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__22169_22212__$1)){
-var c__5548__auto___22213 = cljs.core.chunk_first.call(null,seq__22169_22212__$1);
-var G__22215 = cljs.core.chunk_rest.call(null,seq__22169_22212__$1);
-var G__22216 = c__5548__auto___22213;
-var G__22217 = cljs.core.count.call(null,c__5548__auto___22213);
-var G__22218 = (0);
-seq__22169_22190 = G__22215;
-chunk__22170_22192 = G__22216;
-count__22171_22193 = G__22217;
-i__22172_22194 = G__22218;
+var temp__5825__auto___15017 = cljs.core.seq.call(null,seq__15004_15008);
+if(temp__5825__auto___15017){
+var seq__15004_15018__$1 = temp__5825__auto___15017;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__15004_15018__$1)){
+var c__5548__auto___15019 = cljs.core.chunk_first.call(null,seq__15004_15018__$1);
+var G__15020 = cljs.core.chunk_rest.call(null,seq__15004_15018__$1);
+var G__15021 = c__5548__auto___15019;
+var G__15022 = cljs.core.count.call(null,c__5548__auto___15019);
+var G__15023 = (0);
+seq__15004_15008 = G__15020;
+chunk__15005_15009 = G__15021;
+count__15006_15010 = G__15022;
+i__15007_15011 = G__15023;
 continue;
 } else {
-var message_22220 = cljs.core.first.call(null,seq__22169_22212__$1);
-taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"error","error",-978969032),"c3kit.wire.apic",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay(((function (seq__22169_22190,chunk__22170_22192,count__22171_22193,i__22172_22194,message_22220,seq__22169_22212__$1,temp__5825__auto___22211,response__$1){
+var message_15024 = cljs.core.first.call(null,seq__15004_15018__$1);
+taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"error","error",-978969032),"c3kit.wire.apic",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay(((function (seq__15004_15008,chunk__15005_15009,count__15006_15010,i__15007_15011,message_15024,seq__15004_15018__$1,temp__5825__auto___15017,response__$1){
 return (function (){
-return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [message_22220], null);
-});})(seq__22169_22190,chunk__22170_22192,count__22171_22193,i__22172_22194,message_22220,seq__22169_22212__$1,temp__5825__auto___22211,response__$1))
-,null)),null,(78),null);
+return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [message_15024], null);
+});})(seq__15004_15008,chunk__15005_15009,count__15006_15010,i__15007_15011,message_15024,seq__15004_15018__$1,temp__5825__auto___15017,response__$1))
+,null)),null,(51),null);
 
 
-var G__22223 = cljs.core.next.call(null,seq__22169_22212__$1);
-var G__22224 = null;
-var G__22225 = (0);
-var G__22226 = (0);
-seq__22169_22190 = G__22223;
-chunk__22170_22192 = G__22224;
-count__22171_22193 = G__22225;
-i__22172_22194 = G__22226;
+var G__15025 = cljs.core.next.call(null,seq__15004_15018__$1);
+var G__15026 = null;
+var G__15027 = (0);
+var G__15028 = (0);
+seq__15004_15008 = G__15025;
+chunk__15005_15009 = G__15026;
+count__15006_15010 = G__15027;
+i__15007_15011 = G__15028;
 continue;
 }
 } else {
@@ -106,8 +106,8 @@ return c3kit.wire.flashc.text.call(null,c3kit.wire.apic.first_flash.call(null,re
  * The request was processed without a hitch.
  */
 c3kit.wire.apic.ok = (function c3kit$wire$apic$ok(var_args){
-var G__22188 = arguments.length;
-switch (G__22188) {
+var G__15030 = arguments.length;
+switch (G__15030) {
 case 0:
 return c3kit.wire.apic.ok.cljs$core$IFn$_invoke$arity$0();
 
@@ -144,8 +144,8 @@ return c3kit.wire.apic.flash_success.call(null,c3kit.wire.apic.ok.call(null,payl
  * The request failed for anticipated reasons.
  */
 c3kit.wire.apic.fail = (function c3kit$wire$apic$fail(var_args){
-var G__22195 = arguments.length;
-switch (G__22195) {
+var G__15033 = arguments.length;
+switch (G__15033) {
 case 0:
 return c3kit.wire.apic.fail.cljs$core$IFn$_invoke$arity$0();
 
@@ -182,8 +182,8 @@ return c3kit.wire.apic.flash_error.call(null,c3kit.wire.apic.fail.call(null,payl
  * An unexpected exception was thrown while processing the request.
  */
 c3kit.wire.apic.error = (function c3kit$wire$apic$error(var_args){
-var G__22198 = arguments.length;
-switch (G__22198) {
+var G__15035 = arguments.length;
+switch (G__15035) {
 case 0:
 return c3kit.wire.apic.error.cljs$core$IFn$_invoke$arity$0();
 
@@ -217,8 +217,8 @@ return c3kit.wire.apic.flash_error.call(null,c3kit.wire.apic.error.call(null,pay
 (c3kit.wire.apic.error.cljs$lang$maxFixedArity = 2);
 
 c3kit.wire.apic.redirect = (function c3kit$wire$apic$redirect(var_args){
-var G__22206 = arguments.length;
-switch (G__22206) {
+var G__15038 = arguments.length;
+switch (G__15038) {
 case 1:
 return c3kit.wire.apic.redirect.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

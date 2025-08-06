@@ -28,8 +28,11 @@ export default function SinglePost (props: Props) {
     return (<><div className="blogPost">
                 <h1>{singlePost.title}</h1> <br/>
                 {singlePost.date}  <br/>
-                {singlePost.blog}
+                <p>{singlePost.blog}</p>
+                {singlePost.date == "8-5-25" ? 
                 <TicTacToe/>
+                :null 
+                }
             </div>
             </>)
     }

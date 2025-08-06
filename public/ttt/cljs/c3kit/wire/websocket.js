@@ -17,35 +17,35 @@ c3kit.wire.websocket.pending_calls = cljs.core.atom.call(null,cljs.core.Persiste
 c3kit.wire.websocket.handle_remote_response = (function c3kit$wire$websocket$handle_remote_response(remote_call,response){
 taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"debug","debug",-1608172596),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["remote response: ",response], null);
-}),null)),null,(123),null);
+}),null)),null,(69),null);
 
 return c3kit.wire.api.handle_api_response.call(null,response,remote_call);
 });
 c3kit.wire.websocket.build_remote_call = (function c3kit$wire$websocket$build_remote_call(kind,params,handler,opt_args){
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"options","options",99638489),c3kit.apron.corec.__GT_options.call(null,opt_args),new cljs.core.Keyword(null,"kind","kind",-717265803),kind,new cljs.core.Keyword(null,"params","params",710516235),params,new cljs.core.Keyword(null,"handler","handler",-195596612),handler], null);
 });
-c3kit.wire.websocket.make_call_BANG_ = (function c3kit$wire$websocket$make_call_BANG_(p__26228){
-var map__26229 = p__26228;
-var map__26229__$1 = cljs.core.__destructure_map.call(null,map__26229);
-var remote_call = map__26229__$1;
-var kind = cljs.core.get.call(null,map__26229__$1,new cljs.core.Keyword(null,"kind","kind",-717265803));
-var params = cljs.core.get.call(null,map__26229__$1,new cljs.core.Keyword(null,"params","params",710516235));
+c3kit.wire.websocket.make_call_BANG_ = (function c3kit$wire$websocket$make_call_BANG_(p__19138){
+var map__19139 = p__19138;
+var map__19139__$1 = cljs.core.__destructure_map.call(null,map__19139);
+var remote_call = map__19139__$1;
+var kind = cljs.core.get.call(null,map__19139__$1,new cljs.core.Keyword(null,"kind","kind",-717265803));
+var params = cljs.core.get.call(null,map__19139__$1,new cljs.core.Keyword(null,"params","params",710516235));
 taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"debug","debug",-1608172596),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, ["call: ",kind,params], null);
-}),null)),null,(124),null);
+}),null)),null,(71),null);
 
 return c3kit.wire.websocketc.call_BANG_.call(null,c3kit.wire.websocket.client,kind,params,cljs.core.partial.call(null,c3kit.wire.websocket.handle_remote_response,remote_call));
 });
 c3kit.wire.websocket.call_BANG_ = (function c3kit$wire$websocket$call_BANG_(var_args){
 var args__5755__auto__ = [];
-var len__5749__auto___26236 = arguments.length;
-var i__5750__auto___26237 = (0);
+var len__5749__auto___19157 = arguments.length;
+var i__5750__auto___19158 = (0);
 while(true){
-if((i__5750__auto___26237 < len__5749__auto___26236)){
-args__5755__auto__.push((arguments[i__5750__auto___26237]));
+if((i__5750__auto___19158 < len__5749__auto___19157)){
+args__5755__auto__.push((arguments[i__5750__auto___19158]));
 
-var G__26243 = (i__5750__auto___26237 + (1));
-i__5750__auto___26237 = G__26243;
+var G__19160 = (i__5750__auto___19158 + (1));
+i__5750__auto___19158 = G__19160;
 continue;
 } else {
 }
@@ -68,68 +68,68 @@ return cljs.core.swap_BANG_.call(null,c3kit.wire.websocket.pending_calls,cljs.co
 (c3kit.wire.websocket.call_BANG_.cljs$lang$maxFixedArity = (3));
 
 /** @this {Function} */
-(c3kit.wire.websocket.call_BANG_.cljs$lang$applyTo = (function (seq26232){
-var G__26233 = cljs.core.first.call(null,seq26232);
-var seq26232__$1 = cljs.core.next.call(null,seq26232);
-var G__26234 = cljs.core.first.call(null,seq26232__$1);
-var seq26232__$2 = cljs.core.next.call(null,seq26232__$1);
-var G__26235 = cljs.core.first.call(null,seq26232__$2);
-var seq26232__$3 = cljs.core.next.call(null,seq26232__$2);
+(c3kit.wire.websocket.call_BANG_.cljs$lang$applyTo = (function (seq19142){
+var G__19143 = cljs.core.first.call(null,seq19142);
+var seq19142__$1 = cljs.core.next.call(null,seq19142);
+var G__19144 = cljs.core.first.call(null,seq19142__$1);
+var seq19142__$2 = cljs.core.next.call(null,seq19142__$1);
+var G__19146 = cljs.core.first.call(null,seq19142__$2);
+var seq19142__$3 = cljs.core.next.call(null,seq19142__$2);
 var self__5734__auto__ = this;
-return self__5734__auto__.cljs$core$IFn$_invoke$arity$variadic(G__26233,G__26234,G__26235,seq26232__$3);
+return self__5734__auto__.cljs$core$IFn$_invoke$arity$variadic(G__19143,G__19144,G__19146,seq19142__$3);
 }));
 
 c3kit.wire.websocket.on_open = (function c3kit$wire$websocket$on_open(_){
 var calls = cljs.core.deref.call(null,c3kit.wire.websocket.pending_calls);
 cljs.core.reset_BANG_.call(null,c3kit.wire.websocket.pending_calls,cljs.core.PersistentVector.EMPTY);
 
-var seq__26239 = cljs.core.seq.call(null,calls);
-var chunk__26240 = null;
-var count__26241 = (0);
-var i__26242 = (0);
+var seq__19153 = cljs.core.seq.call(null,calls);
+var chunk__19154 = null;
+var count__19155 = (0);
+var i__19156 = (0);
 while(true){
-if((i__26242 < count__26241)){
-var call = cljs.core._nth.call(null,chunk__26240,i__26242);
+if((i__19156 < count__19155)){
+var call = cljs.core._nth.call(null,chunk__19154,i__19156);
 c3kit.wire.websocket.make_call_BANG_.call(null,call);
 
 
-var G__26251 = seq__26239;
-var G__26252 = chunk__26240;
-var G__26253 = count__26241;
-var G__26254 = (i__26242 + (1));
-seq__26239 = G__26251;
-chunk__26240 = G__26252;
-count__26241 = G__26253;
-i__26242 = G__26254;
+var G__19189 = seq__19153;
+var G__19190 = chunk__19154;
+var G__19191 = count__19155;
+var G__19192 = (i__19156 + (1));
+seq__19153 = G__19189;
+chunk__19154 = G__19190;
+count__19155 = G__19191;
+i__19156 = G__19192;
 continue;
 } else {
-var temp__5825__auto__ = cljs.core.seq.call(null,seq__26239);
+var temp__5825__auto__ = cljs.core.seq.call(null,seq__19153);
 if(temp__5825__auto__){
-var seq__26239__$1 = temp__5825__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__26239__$1)){
-var c__5548__auto__ = cljs.core.chunk_first.call(null,seq__26239__$1);
-var G__26257 = cljs.core.chunk_rest.call(null,seq__26239__$1);
-var G__26258 = c__5548__auto__;
-var G__26259 = cljs.core.count.call(null,c__5548__auto__);
-var G__26260 = (0);
-seq__26239 = G__26257;
-chunk__26240 = G__26258;
-count__26241 = G__26259;
-i__26242 = G__26260;
+var seq__19153__$1 = temp__5825__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__19153__$1)){
+var c__5548__auto__ = cljs.core.chunk_first.call(null,seq__19153__$1);
+var G__19199 = cljs.core.chunk_rest.call(null,seq__19153__$1);
+var G__19200 = c__5548__auto__;
+var G__19201 = cljs.core.count.call(null,c__5548__auto__);
+var G__19202 = (0);
+seq__19153 = G__19199;
+chunk__19154 = G__19200;
+count__19155 = G__19201;
+i__19156 = G__19202;
 continue;
 } else {
-var call = cljs.core.first.call(null,seq__26239__$1);
+var call = cljs.core.first.call(null,seq__19153__$1);
 c3kit.wire.websocket.make_call_BANG_.call(null,call);
 
 
-var G__26261 = cljs.core.next.call(null,seq__26239__$1);
-var G__26262 = null;
-var G__26263 = (0);
-var G__26264 = (0);
-seq__26239 = G__26261;
-chunk__26240 = G__26262;
-count__26241 = G__26263;
-i__26242 = G__26264;
+var G__19203 = cljs.core.next.call(null,seq__19153__$1);
+var G__19204 = null;
+var G__19205 = (0);
+var G__19206 = (0);
+seq__19153 = G__19203;
+chunk__19154 = G__19204;
+count__19155 = G__19205;
+i__19156 = G__19206;
 continue;
 }
 } else {
@@ -155,15 +155,15 @@ return null;
 cljs.core._add_method.call(null,c3kit.wire.websocket.push_handler,new cljs.core.Keyword(null,"default","default",-1987822328),(function (message){
 return taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"warn","warn",-436710552),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Unhandled push event: ",message], null);
-}),null)),null,(125),null);
+}),null)),null,(75),null);
 }));
-cljs.core._add_method.call(null,c3kit.wire.websocket.push_handler,new cljs.core.Keyword("ws","hello","ws/hello",-245030281),(function (p__26255){
-var map__26256 = p__26255;
-var map__26256__$1 = cljs.core.__destructure_map.call(null,map__26256);
-var params = cljs.core.get.call(null,map__26256__$1,new cljs.core.Keyword(null,"params","params",710516235));
+cljs.core._add_method.call(null,c3kit.wire.websocket.push_handler,new cljs.core.Keyword("ws","hello","ws/hello",-245030281),(function (p__19186){
+var map__19187 = p__19186;
+var map__19187__$1 = cljs.core.__destructure_map.call(null,map__19187);
+var params = cljs.core.get.call(null,map__19187__$1,new cljs.core.Keyword(null,"params","params",710516235));
 return taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"debug","debug",-1608172596),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["hello: ",params], null);
-}),null)),null,(126),null);
+}),null)),null,(76),null);
 }));
 cljs.core._add_method.call(null,c3kit.wire.websocket.push_handler,new cljs.core.Keyword("ws","open","ws/open",-1763599228),(function (_){
 cljs.core.reset_BANG_.call(null,c3kit.wire.websocket.open_QMARK_,true);
@@ -171,10 +171,10 @@ cljs.core.reset_BANG_.call(null,c3kit.wire.websocket.open_QMARK_,true);
 if(cljs.core.truth_(cljs.core.deref.call(null,c3kit.wire.websocket.reconnection_QMARK_))){
 cljs.core.reset_BANG_.call(null,c3kit.wire.websocket.reconnection_QMARK_,false);
 
-var temp__5825__auto___26269 = new cljs.core.Keyword(null,"ws-on-reconnected","ws-on-reconnected",2030895392).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,c3kit.wire.api.config));
-if(cljs.core.truth_(temp__5825__auto___26269)){
-var on_reconnected_26270 = temp__5825__auto___26269;
-on_reconnected_26270.call(null);
+var temp__5825__auto___19209 = new cljs.core.Keyword(null,"ws-on-reconnected","ws-on-reconnected",2030895392).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,c3kit.wire.api.config));
+if(cljs.core.truth_(temp__5825__auto___19209)){
+var on_reconnected_19210 = temp__5825__auto___19209;
+on_reconnected_19210.call(null);
 } else {
 }
 } else {
@@ -183,53 +183,53 @@ on_reconnected_26270.call(null);
 var calls = cljs.core.deref.call(null,c3kit.wire.websocket.pending_calls);
 cljs.core.reset_BANG_.call(null,c3kit.wire.websocket.pending_calls,cljs.core.PersistentVector.EMPTY);
 
-var seq__26265 = cljs.core.seq.call(null,calls);
-var chunk__26266 = null;
-var count__26267 = (0);
-var i__26268 = (0);
+var seq__19193 = cljs.core.seq.call(null,calls);
+var chunk__19194 = null;
+var count__19195 = (0);
+var i__19196 = (0);
 while(true){
-if((i__26268 < count__26267)){
-var call = cljs.core._nth.call(null,chunk__26266,i__26268);
+if((i__19196 < count__19195)){
+var call = cljs.core._nth.call(null,chunk__19194,i__19196);
 c3kit.wire.websocket.make_call_BANG_.call(null,call);
 
 
-var G__26271 = seq__26265;
-var G__26272 = chunk__26266;
-var G__26273 = count__26267;
-var G__26274 = (i__26268 + (1));
-seq__26265 = G__26271;
-chunk__26266 = G__26272;
-count__26267 = G__26273;
-i__26268 = G__26274;
+var G__19214 = seq__19193;
+var G__19215 = chunk__19194;
+var G__19216 = count__19195;
+var G__19217 = (i__19196 + (1));
+seq__19193 = G__19214;
+chunk__19194 = G__19215;
+count__19195 = G__19216;
+i__19196 = G__19217;
 continue;
 } else {
-var temp__5825__auto__ = cljs.core.seq.call(null,seq__26265);
+var temp__5825__auto__ = cljs.core.seq.call(null,seq__19193);
 if(temp__5825__auto__){
-var seq__26265__$1 = temp__5825__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,seq__26265__$1)){
-var c__5548__auto__ = cljs.core.chunk_first.call(null,seq__26265__$1);
-var G__26275 = cljs.core.chunk_rest.call(null,seq__26265__$1);
-var G__26276 = c__5548__auto__;
-var G__26277 = cljs.core.count.call(null,c__5548__auto__);
-var G__26278 = (0);
-seq__26265 = G__26275;
-chunk__26266 = G__26276;
-count__26267 = G__26277;
-i__26268 = G__26278;
+var seq__19193__$1 = temp__5825__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,seq__19193__$1)){
+var c__5548__auto__ = cljs.core.chunk_first.call(null,seq__19193__$1);
+var G__19218 = cljs.core.chunk_rest.call(null,seq__19193__$1);
+var G__19219 = c__5548__auto__;
+var G__19220 = cljs.core.count.call(null,c__5548__auto__);
+var G__19221 = (0);
+seq__19193 = G__19218;
+chunk__19194 = G__19219;
+count__19195 = G__19220;
+i__19196 = G__19221;
 continue;
 } else {
-var call = cljs.core.first.call(null,seq__26265__$1);
+var call = cljs.core.first.call(null,seq__19193__$1);
 c3kit.wire.websocket.make_call_BANG_.call(null,call);
 
 
-var G__26279 = cljs.core.next.call(null,seq__26265__$1);
-var G__26280 = null;
-var G__26281 = (0);
-var G__26282 = (0);
-seq__26265 = G__26279;
-chunk__26266 = G__26280;
-count__26267 = G__26281;
-i__26268 = G__26282;
+var G__19222 = cljs.core.next.call(null,seq__19193__$1);
+var G__19223 = null;
+var G__19224 = (0);
+var G__19225 = (0);
+seq__19193 = G__19222;
+chunk__19194 = G__19223;
+count__19195 = G__19224;
+i__19196 = G__19225;
 continue;
 }
 } else {
@@ -246,14 +246,14 @@ cljs.core.reset_BANG_.call(null,c3kit.wire.websocket.reconnection_QMARK_,true);
 
 taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"warn","warn",-436710552),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["connection closed... reconnecting"], null);
-}),null)),null,(128),null);
+}),null)),null,(77),null);
 
 return c3kit.wire.js.timeout.call(null,(1000),c3kit.wire.websocket.connect_BANG_.call(null));
 }));
 cljs.core._add_method.call(null,c3kit.wire.websocket.push_handler,new cljs.core.Keyword("ws","error","ws/error",-978964716),(function (_){
 return taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"warn","warn",-436710552),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["websocket error"], null);
-}),null)),null,(130),null);
+}),null)),null,(78),null);
 }));
 c3kit.wire.websocket.message_handler = (function c3kit$wire$websocket$message_handler(message){
 return c3kit.wire.websocket.push_handler.call(null,message);
@@ -272,14 +272,14 @@ return c3kit.wire.websocket.connect_BANG_.call(null);
 } else {
 return taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"error","error",-978969032),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["CSRF Token missing.  Unable to start websocket."], null);
-}),null)),null,(131),null);
+}),null)),null,(79),null);
 }
 }
 });
 c3kit.wire.websocket.stop_BANG_ = (function c3kit$wire$websocket$stop_BANG_(){
 return taoensso.timbre._log_BANG_.call(null,taoensso.timbre._STAR_config_STAR_,new cljs.core.Keyword(null,"info","info",-317069002),"c3kit.wire.websocket",null,null,null,new cljs.core.Keyword(null,"p","p",151049309),new cljs.core.Keyword(null,"auto","auto",-566279492),(new cljs.core.Delay((function (){
 return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["stopping websocket"], null);
-}),null)),null,(132),null);
+}),null)),null,(80),null);
 });
 c3kit.wire.websocket.disconnected_button = (function c3kit$wire$websocket$disconnected_button(){
 var open_QMARK_ = reagent.core.atom.call(null,false);

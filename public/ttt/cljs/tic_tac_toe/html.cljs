@@ -1,9 +1,10 @@
 (ns tic-tac-toe.html
   (:require [tic-tac-toe.board :as board]
             [tic-tac-toe.human-turn :as ht]
-            [tic-tac-toe.setup :as setup]))
+            [tic-tac-toe.setup :as setup]
+            [tic-tac-toe.setupc :as setupc]))
 
-(defn reset-btn? []
+(defn- reset-btn? []
   (if (:players @setup/state)
     [:button {:id       "reset-btn"
               :on-click #(reset! setup/state setup/starting-state)}
@@ -63,28 +64,28 @@
      [:h1 text]
      [:div [:button {:id       "easy"
                      :class    "diff"
-                     :on-click #(setup/select-difficulty! :easy)} "Easy"]
+                     :on-click #(setupc/select-difficulty! setup/state :easy)} "Easy"]
       [:button {:id       "medium"
                 :class    "diff"
-                :on-click #(setup/select-difficulty! :medium)} "Medium"]
+                :on-click #(setupc/select-difficulty! setup/state :medium)} "Medium"]
       [:button {:id       "hard"
                 :class    "diff"
-                :on-click #(setup/select-difficulty! :hard)} "Hard"]]
+                :on-click #(setupc/select-difficulty! setup/state :hard)} "Hard"]]
      [:br]
      (reset-btn?)]))
 
-(defn- ai-ai? []
+(defn- ignore-user-input? []
   (or
     (= :game-over (:screen @setup/state))
     (= [:ai :ai] (:players @setup/state))))
 
 (defn- handle-click [idx]
-  (if (ai-ai?)
+  (if (ignore-user-input?)
     nil
     (swap! setup/state ht/apply-human-move (js/parseInt idx))))
 
 (defn- cell-cursor [value]
-  (if (or (string? value) (ai-ai?))
+  (if (or (string? value) (ignore-user-input?))
     "default"
     "pointer"))
 

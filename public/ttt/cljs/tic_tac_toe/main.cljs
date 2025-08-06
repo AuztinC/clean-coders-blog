@@ -1,6 +1,8 @@
 (ns tic-tac-toe.main
-  (:require [reagent.dom.client :as rdomc]
+  (:require
             [c3kit.wire.js :as wjs]
+            [reagent.dom :as rdom]
+            [tic-tac-toe.board :as board]
             [tic-tac-toe.html :as html]
             [tic-tac-toe.setup :as setup]))
 
@@ -13,10 +15,9 @@
       :game (html/game)
       :game-over (html/game-over))))
 
-(defonce started?
-  (do
-    (add-watch setup/state :auto-turn setup/auto-advance)
-    true))
+#_(defonce started?
+  (add-watch setup/state :auto-turn setup/auto-advance))
 
 (defn ^:export main []
-  (rdomc/render (rdomc/create-root (wjs/element-by-id "app")) [app]))
+  (add-watch setup/state :auto-turn setup/auto-advance)
+  (rdom/render [app] (wjs/element-by-id "app") ))
