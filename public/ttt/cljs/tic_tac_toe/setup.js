@@ -6,6 +6,7 @@ goog.require('reagent.core');
 goog.require('tic_tac_toe.board');
 goog.require('tic_tac_toe.game');
 goog.require('tic_tac_toe.ai_turn');
+goog.require('tic_tac_toe.persistence');
 goog.require('tic_tac_toe.setupc');
 tic_tac_toe.setup.starting_state = new cljs.core.PersistentArrayMap(null, 6, [new cljs.core.Keyword(null,"store","store",1512230022),null,new cljs.core.Keyword(null,"active","active",1895962068),true,new cljs.core.Keyword(null,"screen","screen",1990059748),new cljs.core.Keyword(null,"select-game-mode","select-game-mode",-1136430370),new cljs.core.Keyword(null,"ui","ui",-469653645),new cljs.core.Keyword(null,"web-cljs","web-cljs",186043180),new cljs.core.Keyword(null,"turn","turn",75759344),"p1",new cljs.core.Keyword(null,"markers","markers",-246919693),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["X","O"], null)], null);
 if((typeof tic_tac_toe !== 'undefined') && (typeof tic_tac_toe.setup !== 'undefined') && (typeof tic_tac_toe.setup.state !== 'undefined')){
@@ -13,8 +14,8 @@ if((typeof tic_tac_toe !== 'undefined') && (typeof tic_tac_toe.setup !== 'undefi
 tic_tac_toe.setup.state = reagent.core.atom.call(null,tic_tac_toe.setup.starting_state);
 }
 cljs.core._add_method.call(null,tic_tac_toe.setupc.select_difficulty_BANG_,new cljs.core.Keyword(null,"web-cljs","web-cljs",186043180),(function (state,choice){
-var ai_count = cljs.core.count.call(null,cljs.core.filterv.call(null,(function (p1__6735_SHARP_){
-return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"ai","ai",760454697),p1__6735_SHARP_);
+var ai_count = cljs.core.count.call(null,cljs.core.filterv.call(null,(function (p1__12830_SHARP_){
+return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"ai","ai",760454697),p1__12830_SHARP_);
 }),new cljs.core.Keyword(null,"players","players",-1361554569).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,state))));
 var updated_difficulties = cljs.core.conj.call(null,cljs.core.vec.call(null,new cljs.core.Keyword(null,"difficulties","difficulties",179230342).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,state))),choice);
 if((cljs.core.count.call(null,updated_difficulties) < ai_count)){
@@ -28,11 +29,11 @@ return setTimeout(fn,t);
 });
 tic_tac_toe.setup.game_over_QMARK_ = (function tic_tac_toe$setup$game_over_QMARK_(winner_QMARK_,new$){
 if(cljs.core.truth_(winner_QMARK_)){
-cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,tic_tac_toe.game.next_state.call(null,new$));
+cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,new$);
 
-return cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,cljs.core.assoc.call(null,tic_tac_toe.game.next_state.call(null,new$),new cljs.core.Keyword(null,"screen","screen",1990059748),new cljs.core.Keyword(null,"game-over","game-over",-607322695)));
+return setTimeout(cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,cljs.core.assoc.call(null,new$,new cljs.core.Keyword(null,"screen","screen",1990059748),new cljs.core.Keyword(null,"game-over","game-over",-607322695))),(10));
 } else {
-return cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,tic_tac_toe.game.next_state.call(null,new$));
+return cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,new$);
 }
 });
 tic_tac_toe.setup.auto_advance = (function tic_tac_toe$setup$auto_advance(_key,_atom,_old,new$){
@@ -46,7 +47,7 @@ return tic_tac_toe.setup.sleep.call(null,(function (){
 return cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,tic_tac_toe.game.next_state.call(null,new$));
 }),(500));
 } else {
-return tic_tac_toe.setup.game_over_QMARK_.call(null,winner_QMARK_,new$);
+return tic_tac_toe.setup.game_over_QMARK_.call(null,winner_QMARK_,after_move_state);
 }
 } else {
 return null;

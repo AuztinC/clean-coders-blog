@@ -13,8 +13,8 @@ if((typeof tic_tac_toe !== 'undefined') && (typeof tic_tac_toe.setup !== 'undefi
 tic_tac_toe.setup.state = reagent.core.atom.call(null,tic_tac_toe.setup.starting_state);
 }
 cljs.core._add_method.call(null,tic_tac_toe.setupc.select_difficulty_BANG_,new cljs.core.Keyword(null,"web-cljs","web-cljs",186043180),(function (state,choice){
-var ai_count = cljs.core.count.call(null,cljs.core.filterv.call(null,(function (p1__16553_SHARP_){
-return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"ai","ai",760454697),p1__16553_SHARP_);
+var ai_count = cljs.core.count.call(null,cljs.core.filterv.call(null,(function (p1__6735_SHARP_){
+return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"ai","ai",760454697),p1__6735_SHARP_);
 }),new cljs.core.Keyword(null,"players","players",-1361554569).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,state))));
 var updated_difficulties = cljs.core.conj.call(null,cljs.core.vec.call(null,new cljs.core.Keyword(null,"difficulties","difficulties",179230342).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,state))),choice);
 if((cljs.core.count.call(null,updated_difficulties) < ai_count)){
@@ -43,7 +43,7 @@ var after_move_state = tic_tac_toe.game.next_state.call(null,new$);
 var winner_QMARK_ = tic_tac_toe.board.check_winner.call(null,new cljs.core.Keyword(null,"board","board",-1907017633).cljs$core$IFn$_invoke$arity$1(after_move_state));
 if(cljs.core._EQ_.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ai","ai",760454697),new cljs.core.Keyword(null,"ai","ai",760454697)], null),new cljs.core.Keyword(null,"players","players",-1361554569).cljs$core$IFn$_invoke$arity$1(new$))){
 return tic_tac_toe.setup.sleep.call(null,(function (){
-return tic_tac_toe.setup.game_over_QMARK_.call(null,winner_QMARK_,new$);
+return cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,tic_tac_toe.game.next_state.call(null,new$));
 }),(500));
 } else {
 return tic_tac_toe.setup.game_over_QMARK_.call(null,winner_QMARK_,new$);

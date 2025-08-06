@@ -7,9 +7,9 @@ goog.require('tic_tac_toe.setup');
 goog.require('tic_tac_toe.setupc');
 tic_tac_toe.html.reset_btn_QMARK_ = (function tic_tac_toe$html$reset_btn_QMARK_(){
 if(cljs.core.truth_(new cljs.core.Keyword(null,"players","players",-1361554569).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,tic_tac_toe.setup.state)))){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"button","button",1456579943),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"id","id",-1388402092),"reset-btn",new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"button","button",1456579943),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"id","id",-1388402092),"reset-btn",new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
 return cljs.core.reset_BANG_.call(null,tic_tac_toe.setup.state,tic_tac_toe.setup.starting_state);
-})], null),"Reset Game?"], null);
+}),new cljs.core.Keyword(null,"disabled","disabled",-1529784218),((cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"game","game",-441523833),new cljs.core.Keyword(null,"screen","screen",1990059748).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,tic_tac_toe.setup.state)))) && (cljs.core._EQ_.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ai","ai",760454697),new cljs.core.Keyword(null,"ai","ai",760454697)], null),new cljs.core.Keyword(null,"players","players",-1361554569).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,tic_tac_toe.setup.state)))))], null),"Reset Game?"], null);
 } else {
 return null;
 }
@@ -62,8 +62,8 @@ return "pointer";
 }
 });
 tic_tac_toe.html.cell_text_color = (function tic_tac_toe$html$cell_text_color(value){
-var G__6738 = value;
-switch (G__6738) {
+var G__12833 = value;
+switch (G__12833) {
 case "X":
 return "orange";
 
@@ -82,18 +82,18 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 return tic_tac_toe.html.handle_click.call(null,value);
 })], null),value], null);
 });
-tic_tac_toe.html.render_board = (function tic_tac_toe$html$render_board(p__6740){
-var map__6741 = p__6740;
-var map__6741__$1 = cljs.core.__destructure_map.call(null,map__6741);
-var _state = map__6741__$1;
-var board_size = cljs.core.get.call(null,map__6741__$1,new cljs.core.Keyword(null,"board-size","board-size",140730505));
-var board = cljs.core.get.call(null,map__6741__$1,new cljs.core.Keyword(null,"board","board",-1907017633));
+tic_tac_toe.html.render_board = (function tic_tac_toe$html$render_board(p__12835){
+var map__12836 = p__12835;
+var map__12836__$1 = cljs.core.__destructure_map.call(null,map__12836);
+var _state = map__12836__$1;
+var board_size = cljs.core.get.call(null,map__12836__$1,new cljs.core.Keyword(null,"board-size","board-size",140730505));
+var board = cljs.core.get.call(null,map__12836__$1,new cljs.core.Keyword(null,"board","board",-1907017633));
 var indexed = cljs.core.map_indexed.call(null,(function (idx,_cell){
 return tic_tac_toe.html.render_cell.call(null,((cljs.core._EQ_.call(null,"",cljs.core.first.call(null,cljs.core.nth.call(null,board,idx))))?idx:cljs.core.first.call(null,cljs.core.nth.call(null,board,idx))));
 }),board);
-var size = (function (){var G__6742 = board_size;
-var G__6742__$1 = (((G__6742 instanceof cljs.core.Keyword))?G__6742.fqn:null);
-switch (G__6742__$1) {
+var size = (function (){var G__12837 = board_size;
+var G__12837__$1 = (((G__12837 instanceof cljs.core.Keyword))?G__12837.fqn:null);
+switch (G__12837__$1) {
 case "3x3":
 return (3);
 
@@ -107,12 +107,12 @@ return (9);
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__6742__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__12837__$1)].join('')));
 
 }
 })();
 var part_board = cljs.core.partition.call(null,size,indexed);
-return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"board"], null)], null),cljs.core.map_indexed.call(null,(function (i,row){
+return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"id","id",-1388402092),["game-board-",cljs.core.name.call(null,board_size)].join('')], null)], null),cljs.core.map_indexed.call(null,(function (i,row){
 return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"row"], null)], null),row);
 }),part_board));
 });

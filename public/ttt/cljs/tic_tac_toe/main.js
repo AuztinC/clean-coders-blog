@@ -8,9 +8,9 @@ goog.require('tic_tac_toe.html');
 goog.require('tic_tac_toe.setup');
 tic_tac_toe.main.app = (function tic_tac_toe$main$app(){
 var screen__$1 = new cljs.core.Keyword(null,"screen","screen",1990059748).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,tic_tac_toe.setup.state));
-var G__10746 = screen__$1;
-var G__10746__$1 = (((G__10746 instanceof cljs.core.Keyword))?G__10746.fqn:null);
-switch (G__10746__$1) {
+var G__12881 = screen__$1;
+var G__12881__$1 = (((G__12881 instanceof cljs.core.Keyword))?G__12881.fqn:null);
+switch (G__12881__$1) {
 case "select-game-mode":
 return tic_tac_toe.html.select_game_mode;
 
@@ -32,7 +32,7 @@ return tic_tac_toe.html.game_over.call(null);
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__10746__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__12881__$1)].join('')));
 
 }
 });
