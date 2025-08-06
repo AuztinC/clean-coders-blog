@@ -14,12 +14,12 @@ return cljs.core.reduce.call(null,(function (acc,move){
 return cljs.core.assoc.call(null,acc,new cljs.core.Keyword(null,"position","position",-2011731912).cljs$core$IFn$_invoke$arity$1(move),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"player","player",-97687400).cljs$core$IFn$_invoke$arity$1(move)], null));
 }),tic_tac_toe.board.get_board.call(null,cljs.core.keyword.call(null,new cljs.core.Keyword(null,"board-size","board-size",140730505).cljs$core$IFn$_invoke$arity$1(game))),moves);
 });
-tic_tac_toe.persistence.file__GT_state = (function tic_tac_toe$persistence$file__GT_state(p__7214){
-var map__7215 = p__7214;
-var map__7215__$1 = cljs.core.__destructure_map.call(null,map__7215);
-var _game = map__7215__$1;
-var state = cljs.core.get.call(null,map__7215__$1,new cljs.core.Keyword(null,"state","state",-1988618099));
-var moves = cljs.core.get.call(null,map__7215__$1,new cljs.core.Keyword(null,"moves","moves",927465255));
+tic_tac_toe.persistence.file__GT_state = (function tic_tac_toe$persistence$file__GT_state(p__7041){
+var map__7043 = p__7041;
+var map__7043__$1 = cljs.core.__destructure_map.call(null,map__7043);
+var _game = map__7043__$1;
+var state = cljs.core.get.call(null,map__7043__$1,new cljs.core.Keyword(null,"state","state",-1988618099));
+var moves = cljs.core.get.call(null,map__7043__$1,new cljs.core.Keyword(null,"moves","moves",927465255));
 return cljs.core.merge.call(null,state,new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null,"store","store",1512230022),new cljs.core.Keyword(null,"file","file",-1269645878),new cljs.core.Keyword(null,"board","board",-1907017633),tic_tac_toe.persistence.play_board.call(null,state,moves),new cljs.core.Keyword(null,"turn","turn",75759344),tic_tac_toe.persistence.next_player.call(null,moves),new cljs.core.Keyword(null,"moves","moves",927465255),moves,new cljs.core.Keyword(null,"markers","markers",-246919693),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["X","O"], null)], null));
 });
 tic_tac_toe.persistence.mem_db = cljs.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
@@ -76,8 +76,8 @@ return cljs.core.reset_BANG_.call(null,tic_tac_toe.persistence.mem_db,cljs.core.
 });
 cljs.core._add_method.call(null,tic_tac_toe.persistence.update_current_game_BANG_,new cljs.core.Keyword(null,"mem","mem",-1804286459),(function (state,move){
 var games = cljs.core.deref.call(null,tic_tac_toe.persistence.mem_db);
-var current_game = cljs.core.second.call(null,cljs.core.first.call(null,cljs.core.filter.call(null,(function (p1__7224_SHARP_){
-return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"active","active",1895962068).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(cljs.core.second.call(null,p1__7224_SHARP_))),true);
+var current_game = cljs.core.second.call(null,cljs.core.first.call(null,cljs.core.filter.call(null,(function (p1__7149_SHARP_){
+return cljs.core._EQ_.call(null,new cljs.core.Keyword(null,"active","active",1895962068).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(cljs.core.second.call(null,p1__7149_SHARP_))),true);
 }),games)));
 var winner_QMARK_ = tic_tac_toe.board.check_winner.call(null,cljs.core.assoc.call(null,new cljs.core.Keyword(null,"board","board",-1907017633).cljs$core$IFn$_invoke$arity$1(state),move,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.first.call(null,cljs.core.get.call(null,new cljs.core.Keyword(null,"board","board",-1907017633).cljs$core$IFn$_invoke$arity$1(state),move))], null)));
 if((current_game == null)){
@@ -136,13 +136,13 @@ cljs.core._add_method.call(null,tic_tac_toe.persistence.previous_games_QMARK_,ne
 var temp__5823__auto__ = cljs.core.deref.call(null,tic_tac_toe.persistence.mem_db);
 if(cljs.core.truth_(temp__5823__auto__)){
 var games = temp__5823__auto__;
-return cljs.core.seq.call(null,cljs.core.filter.call(null,cljs.core.comp.call(null,tic_tac_toe.board.check_winner,new cljs.core.Keyword(null,"board","board",-1907017633)),cljs.core.map.call(null,(function (p__7236){
-var vec__7237 = p__7236;
-var _ = cljs.core.nth.call(null,vec__7237,(0),null);
-var map__7243 = cljs.core.nth.call(null,vec__7237,(1),null);
-var map__7243__$1 = cljs.core.__destructure_map.call(null,map__7243);
-var state = cljs.core.get.call(null,map__7243__$1,new cljs.core.Keyword(null,"state","state",-1988618099));
-var moves = cljs.core.get.call(null,map__7243__$1,new cljs.core.Keyword(null,"moves","moves",927465255));
+return cljs.core.seq.call(null,cljs.core.filter.call(null,cljs.core.comp.call(null,tic_tac_toe.board.check_winner,new cljs.core.Keyword(null,"board","board",-1907017633)),cljs.core.map.call(null,(function (p__7225){
+var vec__7226 = p__7225;
+var _ = cljs.core.nth.call(null,vec__7226,(0),null);
+var map__7229 = cljs.core.nth.call(null,vec__7226,(1),null);
+var map__7229__$1 = cljs.core.__destructure_map.call(null,map__7229);
+var state = cljs.core.get.call(null,map__7229__$1,new cljs.core.Keyword(null,"state","state",-1988618099));
+var moves = cljs.core.get.call(null,map__7229__$1,new cljs.core.Keyword(null,"moves","moves",927465255));
 return cljs.core.assoc.call(null,state,new cljs.core.Keyword(null,"board","board",-1907017633),tic_tac_toe.persistence.play_board.call(null,state,moves));
 }),games)));
 } else {
@@ -163,16 +163,16 @@ cljs.core._add_method.call(null,tic_tac_toe.persistence.clear_active,new cljs.co
 var temp__5825__auto__ = cljs.core.deref.call(null,tic_tac_toe.persistence.mem_db);
 if(cljs.core.truth_(temp__5825__auto__)){
 var games = temp__5825__auto__;
-var temp__5823__auto__ = cljs.core.first.call(null,cljs.core.filter.call(null,(function (p__7312){
-var vec__7316 = p__7312;
-var _ = cljs.core.nth.call(null,vec__7316,(0),null);
-var g = cljs.core.nth.call(null,vec__7316,(1),null);
+var temp__5823__auto__ = cljs.core.first.call(null,cljs.core.filter.call(null,(function (p__7230){
+var vec__7231 = p__7230;
+var _ = cljs.core.nth.call(null,vec__7231,(0),null);
+var g = cljs.core.nth.call(null,vec__7231,(1),null);
 return cljs.core.get_in.call(null,g,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"state","state",-1988618099),new cljs.core.Keyword(null,"active","active",1895962068)], null));
 }),games));
 if(cljs.core.truth_(temp__5823__auto__)){
-var vec__7322 = temp__5823__auto__;
-var id = cljs.core.nth.call(null,vec__7322,(0),null);
-var game = cljs.core.nth.call(null,vec__7322,(1),null);
+var vec__7234 = temp__5823__auto__;
+var id = cljs.core.nth.call(null,vec__7234,(0),null);
+var game = cljs.core.nth.call(null,vec__7234,(1),null);
 var updated_game = cljs.core.assoc.call(null,game,new cljs.core.Keyword(null,"state","state",-1988618099),cljs.core.assoc.call(null,new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core$IFn$_invoke$arity$1(game),new cljs.core.Keyword(null,"active","active",1895962068),false));
 return cljs.core.reset_BANG_.call(null,tic_tac_toe.persistence.mem_db,cljs.core.assoc.call(null,games,id,updated_game));
 } else {

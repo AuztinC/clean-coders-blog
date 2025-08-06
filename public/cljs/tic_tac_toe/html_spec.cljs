@@ -21,7 +21,8 @@
             [tic-tac-toe.html :as sut]
             [tic-tac-toe.human-turn :as ht]
             [tic-tac-toe.setup :as setup]
-            [tic-tac-toe.main :as main]))
+            [tic-tac-toe.main :as main]
+            [tic-tac-toe.setupc :as setupc]))
 
 (defn cssfn [target key]
   (.getPropertyValue (wire/style target) key))
@@ -132,7 +133,8 @@
                              :ui      :web-cljs
                              :players [:human :human]
                              :turn    "p1"
-                             :markers ["X" "O"]})
+                             :markers ["X" "O"]
+                             :board (board/get-board :3x3)})
         (wire/render [main/app])
         (should-select "#board-3x3")
         (wire/click! "#board-3x3")
@@ -148,25 +150,25 @@
               (wire/render [main/app])))
 
     (it "easy"
-      (with-redefs [setup/select-difficulty! (stub :select-difficulty!)]
+      (with-redefs [setupc/select-difficulty! (stub :select-difficulty!)]
         (should-select "#easy")
         (should= "Easy" (wire/text "#easy"))
         (wire/click! "#easy")
-        (should-have-invoked :select-difficulty! {:with [:easy]})))
+        (should-have-invoked :select-difficulty! {:with [setup/state :easy]})))
 
     (it "medium"
-      (with-redefs [setup/select-difficulty! (stub :select-difficulty!)]
+      (with-redefs [setupc/select-difficulty! (stub :select-difficulty!)]
         (should-select "#medium")
         (should= "Medium" (wire/text "#medium"))
         (wire/click! "#medium")
-        (should-have-invoked :select-difficulty! {:with [:medium]})))
+        (should-have-invoked :select-difficulty! {:with [setup/state :medium]})))
 
     (it "hard"
-      (with-redefs [setup/select-difficulty! (stub :select-difficulty!)]
+      (with-redefs [setupc/select-difficulty! (stub :select-difficulty!)]
         (should-select "#hard")
         (should= "Hard" (wire/text "#hard"))
         (wire/click! "#hard")
-        (should-have-invoked :select-difficulty! {:with [:hard]}))))
+        (should-have-invoked :select-difficulty! {:with [setup/state :hard]}))))
 
   (context "drawing board"
     (before (do
@@ -178,6 +180,8 @@
                                    :board-size :3x3
                                    :board      (board/get-board :3x3)})
               (wire/render [main/app])))
+
+    (redefs-around [board/check-winner (stub :check-winner {:return false})])
 
     (it "render-cell returns td with value"
       (let [out (sut/render-cell "index")]

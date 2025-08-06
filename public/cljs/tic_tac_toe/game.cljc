@@ -3,15 +3,20 @@
             [tic-tac-toe.board :as board]
             [tic-tac-toe.persistence :as db]))
 
-(defn sleep []
-  (Thread/sleep 500))
-
 (defn position-dispatch [{:keys [ui] :as _state} [_ player-type] & _]
   [player-type ui])
 (defmulti next-position position-dispatch)
 
+(defn empty-space? [board move]
+  (= [""] (get board move)))
+
 (defn next-player [turn]
   (if (= "p1" turn) "p2" "p1"))
+
+(defn next-player-key [{:keys [turn players] :as _state}]
+  (case turn
+    "p1" (first players)
+    "p2" (second players)))
 
 (defn ->players
   [{:keys [turn players]}]

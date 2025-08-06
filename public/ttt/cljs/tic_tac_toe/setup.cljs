@@ -45,7 +45,7 @@
               winner? (board/check-winner (:board after-move-state))]
           (if (= [:ai :ai] (:players new))
             (sleep
-              #(game-over? winner? new)
+              #(reset! state (game/next-state new))
               500)
             (game-over? winner? new)))))))
 

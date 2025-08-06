@@ -62,8 +62,8 @@ return "pointer";
 }
 });
 tic_tac_toe.html.cell_text_color = (function tic_tac_toe$html$cell_text_color(value){
-var G__16556 = value;
-switch (G__16556) {
+var G__6738 = value;
+switch (G__6738) {
 case "X":
 return "orange";
 
@@ -82,18 +82,18 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 return tic_tac_toe.html.handle_click.call(null,value);
 })], null),value], null);
 });
-tic_tac_toe.html.render_board = (function tic_tac_toe$html$render_board(p__16558){
-var map__16559 = p__16558;
-var map__16559__$1 = cljs.core.__destructure_map.call(null,map__16559);
-var _state = map__16559__$1;
-var board_size = cljs.core.get.call(null,map__16559__$1,new cljs.core.Keyword(null,"board-size","board-size",140730505));
-var board = cljs.core.get.call(null,map__16559__$1,new cljs.core.Keyword(null,"board","board",-1907017633));
+tic_tac_toe.html.render_board = (function tic_tac_toe$html$render_board(p__6740){
+var map__6741 = p__6740;
+var map__6741__$1 = cljs.core.__destructure_map.call(null,map__6741);
+var _state = map__6741__$1;
+var board_size = cljs.core.get.call(null,map__6741__$1,new cljs.core.Keyword(null,"board-size","board-size",140730505));
+var board = cljs.core.get.call(null,map__6741__$1,new cljs.core.Keyword(null,"board","board",-1907017633));
 var indexed = cljs.core.map_indexed.call(null,(function (idx,_cell){
 return tic_tac_toe.html.render_cell.call(null,((cljs.core._EQ_.call(null,"",cljs.core.first.call(null,cljs.core.nth.call(null,board,idx))))?idx:cljs.core.first.call(null,cljs.core.nth.call(null,board,idx))));
 }),board);
-var size = (function (){var G__16560 = board_size;
-var G__16560__$1 = (((G__16560 instanceof cljs.core.Keyword))?G__16560.fqn:null);
-switch (G__16560__$1) {
+var size = (function (){var G__6742 = board_size;
+var G__6742__$1 = (((G__6742 instanceof cljs.core.Keyword))?G__6742.fqn:null);
+switch (G__6742__$1) {
 case "3x3":
 return (3);
 
@@ -107,7 +107,7 @@ return (9);
 
 break;
 default:
-throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__16560__$1)].join('')));
+throw (new Error(["No matching clause: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(G__6742__$1)].join('')));
 
 }
 })();
