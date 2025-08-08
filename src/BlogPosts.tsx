@@ -383,6 +383,16 @@ const blogPosts = [
     title: "Let's Play Tic Tac Toe!",
     blog: "Step right up! Play a game, here! Can you 'Tic' the almighty 'Tac'!? Only 'Toe' can tell.",
     date: "8-5-25"
+  },
+  {
+    title: "The Strategy",
+    blog: "Hearing what Micah and Alex had to say about my project was great. Understanding my previous mistakes is a huge benefit in the long run. I am thankful to have another week to go back and fix some of my errors. I need to show my understanding about the clojurescript environment and the cause to separate specific implementation details. \n\n\t The Strategy and Template design patterns. Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them into a seperate class, and make their objects interchangable. Using external polymorphism we can separate high level policy from a set of low level details. Template on the other hand uses an internal polymorphism pattern. This pattern implements an abstract method that helps partition high level policy from low level implementaiton detail. Template is a smaller pattern that doesn't need an external interface and will be faster because of this. Although, having that extra layer of separation is prefered in most cases.",
+    date: "8-6-25"
+  },
+  {
+    title: "Finite State Machines!",
+    blog: "Considering that with a three bit system you could have 8 total states. It is hard to believe that a system with only 2 more bits can handle something like a 1 with thirty-six 0's. What an incredible difference! Taking time to think about every possible state of a system can be overwhelming. A finitec state machine diagram might help if you are feeling lost in your state logic. Once you have either used a diagram or table visual implementation of y our system, you can then identify all of your transition and events. This will create a great visual aid for you to walk through your systems possible states. \n\n\t In code, this can be achieved with a switch statement looking at a value and dispatching a proper state handler. When a system becomes to large this sort of implementaiton could become a hassle to manage. Using a table driven approach in the code can help here, first defining all possible states and transitions together in a list, that then attach to a function to be called or list of functions. Then we can iterate through all posible states and check which handler needs to be called after a transition is made. \n\n\t Getting a passing production build in my project was a very gratifying thing. Understanding the clojurescript environment enough, at least for my code base, to manage the separation is important.  ",
+    date: "8-7-25"
   }
 ]
 
