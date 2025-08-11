@@ -391,9 +391,19 @@ const blogPosts = [
   },
   {
     title: "Finite State Machines!",
-    blog: "Considering that with a three bit system you could have 8 total states. It is hard to believe that a system with only 2 more bits can handle something like a 1 with thirty-six 0's. What an incredible difference! Taking time to think about every possible state of a system can be overwhelming. A finitec state machine diagram might help if you are feeling lost in your state logic. Once you have either used a diagram or table visual implementation of y our system, you can then identify all of your transition and events. This will create a great visual aid for you to walk through your systems possible states. \n\n\t In code, this can be achieved with a switch statement looking at a value and dispatching a proper state handler. When a system becomes to large this sort of implementaiton could become a hassle to manage. Using a table driven approach in the code can help here, first defining all possible states and transitions together in a list, that then attach to a function to be called or list of functions. Then we can iterate through all posible states and check which handler needs to be called after a transition is made. \n\n\t Getting a passing production build in my project was a very gratifying thing. Understanding the clojurescript environment enough, at least for my code base, to manage the separation is important.  ",
+    blog: "Considering that with a three bit system you could have 8 total states. It is hard to believe that a system with only 2 more bits can handle something like a 1 with thirty-six 0's. What an incredible difference! Taking time to think about every possible state of a system can be overwhelming. A finite state machine diagram might help if you are feeling lost in your state logic. Once you have either used a diagram or table visual implementation of y our system, you can then identify all of your transition and events. This will create a great visual aid for you to walk through your systems possible states. \n\n\t In code, this can be achieved with a switch statement looking at a value and dispatching a proper state handler. When a system becomes to large this sort of implementaiton could become a hassle to manage. Using a table driven approach in the code can help here, first defining all possible states and transitions together in a list, that then attach to a function to be called or list of functions. Then we can iterate through all posible states and check which handler needs to be called after a transition is made. \n\n\t Getting a passing production build in my project was a very gratifying thing. Understanding the clojurescript environment enough, at least for my code base, to manage the separation is important.  ",
     date: "8-7-25"
-  }
+  },
+  {
+    title: "Sitar Friday",
+    blog: "Being the curator our daily meetings is really fun. Sharing some things that I enjoy to learn about with the team has helped my apprenticeship even, I believe. Becoming more comfortable within the team is essential! \n\n\t The idea of having an AI based kata is really interesting. When it was mentioned my mind started reeling, how could that work? What project would be simple enough to get consistent answers from the prompts but challenging enough for a clean coders kata? I'm excited to see what everyone comes up with and try them myself.",
+    date: "8-8-2025"
+  },
+  // {
+  //   title: "",
+  //   blog: "",
+  //   date: ""
+  // },
 ]
 
 export default blogPosts
