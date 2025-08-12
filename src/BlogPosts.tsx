@@ -399,6 +399,11 @@ const blogPosts = [
     blog: "Being the curator our daily meetings is really fun. Sharing some things that I enjoy to learn about with the team has helped my apprenticeship even, I believe. Becoming more comfortable within the team is essential! \n\n\t The idea of having an AI based kata is really interesting. When it was mentioned my mind started reeling, how could that work? What project would be simple enough to get consistent answers from the prompts but challenging enough for a clean coders kata? I'm excited to see what everyone comes up with and try them myself.",
     date: "8-8-2025"
   },
+  {
+    title: "Visitors!",
+    blog: "\n\n\t It’s been fun diving deeper into state machines lately, and today I got to fully understand something called an SMC State Machine Compiler. The idea is simple. You feed it a table of states, events, and actions, and it spits out code that uses the State design pattern. Under the hood, though, it’s doing a lot kind of like a mini compiler. First, it breaks the text down into tokens (that’s the lexer), then reads those tokens to build up the actual state machine structure (that’s the parser). The parser works with a builder so the logic stays separate from the data structures it creates. Pretty neat. \n\n\t Then comes semantic analysis, where it checks to make sure everything actually makes sense. After that, it can optimize the state machine into a simpler, cleaner version. Finally, it uses the Visitor pattern to walk through everything and generate the final code. That’s where you can make it spit out Java, C++, or whatever language you want. You just write a visitor for that language. Putting all these pieces together; lexer, parser, semantic analysis, optimizer, and generator. It feels like building a real compiler, but specialized for state machines. And the result is a nice, clean black box that’s ready to use in your code.",
+    date: "8-11-25"
+  },
   // {
   //   title: "",
   //   blog: "",
