@@ -3,7 +3,8 @@ import './App.css'
 import blogPosts from './BlogPosts'
 import SinglePost from './SinglePost'
 // import TicTacToe from './TTT'
-// import { Routes, Route, Link } from 'react-router'
+import SNSPubsubPost from './SNSPubsubPost'
+import { Routes, Route, useLocation } from 'react-router'
 
 interface Post {
   title: String,
@@ -16,6 +17,8 @@ function App() {
 
 const [singlePostDate, setSinglePostDate] = useState<String>("")
 const [posts, setPosts] = useState<Post[] | any>([])
+const location = useLocation()
+console.log("location:", location.pathname);
 
 useEffect(()=>{
   setPosts(blogPosts.reverse())
@@ -23,7 +26,7 @@ useEffect(()=>{
 
   return (<div className='wrapper'>
 
-      {posts ?
+      {posts && location.pathname !== "/sns-pubsub" ?
         <ul>
           {posts.map((post : any, idx : any)=>(
             <li onClick={()=>setSinglePostDate(post.date)} key={idx}>
@@ -37,9 +40,9 @@ useEffect(()=>{
         <SinglePost date={singlePostDate}/>
     : null}
 
-       {/* <Routes>
-        <Route path={"/:date"} element={<SinglePost/>} />
-       </Routes> */}
+       <Routes>
+        <Route path={"/sns-pubsub"} element={<SNSPubsubPost/>} />
+       </Routes>
 
    </div>)
 }

@@ -1,0 +1,59 @@
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blogPost {
+  max-width: 780px;
+  margin: 0 auto;
+  /* padding: 2rem 1rem; */
+  line-height: 1.65;
+}
+
+.blogPost h1, .blogPost h2, .blogPost h3 {
+  line-height: 1.1;
+  margin: 1.2em 0 0.6em;
+}
+
+.blogPost p {
+  margin: 0 0 .5em;
+}
+
+.blogPost ul, .blogPost ol {
+  margin: 0 0 1em 1.25em;
+}
+
+.blogPost ol li {
+    text-align: start;
+    width: auto;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 0;
+    cursor: default;
+}
+
+.blogPost li {
+  margin: 0.35em 0;
+}
+
+.blogPost pre {
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.blogPost code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.blogPost pre code {
+  display: block;
+}
+
+.blogPost blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid currentColor;
+  opacity: 0.85;
+}
