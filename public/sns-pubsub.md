@@ -144,7 +144,9 @@ This is where pubsub lulled me into a false sense of confidence.
 
 Because that small map is carrying far more responsibility than it appears. A subscription isn’t just “where the message goes.” It’s where delivery semantics are defined. It’s where retries are decided. It’s where failures either surface or disappear.
 
-And it’s where AWS permissions quietly decide whether anything works at all.
+Speaking of disappearing, There was one more lesson here that didn’t fully land until later: dead-letter queues make the timing visible.
+
+Adding an SQS dead-letter queue to an SNS subscription sounds straightforward on paper. In practice, it’s another place where AWS enforces order without explanation. The queue has to exist first. Permissions have to be attached before the subscription can reference it. The subscription itself must be confirmed before certain attributes can be applied. Get the sequence wrong and AWS doesn’t always reject the request—it simply ignores it.
 
 If SNS can’t deliver a message, it will retry. If retries fail and there’s no dead-letter queue, the message can vanish. If a queue policy is missing or misconfigured, delivery can fail silently. From the publisher’s perspective, everything looks fine. The message was “sent.” Somewhere downstream, it simply never arrived.
 
