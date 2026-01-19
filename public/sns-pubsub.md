@@ -13,7 +13,7 @@ For a long time, pubsub lived in my head as one of those phrases you nod along t
 
  
 
-Over the last couple of months, the systems I’ve been working on have been evolving in a very specific way: from a single application into a set of independently running services deployed across Kubernetes pods. Something that I, myself, knew very little about as the transition occurred. Until it had a direct effect on me. The old “just call a function” approach quietly stopped working.
+Over the last couple of months, the systems I’ve been working on have been evolving in a very specific way: from a single application into a set of independently running services deployed across Kubernetes pods. Something that I, myself, knew very little about as the transition occurred. Until it had a direct effect on me.
 
 ---
 
@@ -87,8 +87,6 @@ In a live service application, an API call should do the minimum amount of work 
 Remember, Pubsub is not responsible for ultra-low-latency WebSocket fan-out inside the cluster. For truly fast and optimal WebSocket broadcasts to thousands of clients, teams layer something like Redis Pub/Sub, ElastiCache, or a dedicated real-time service (Pusher, Ably, Socket.IO with adapter) on top which are fast, ephemeral, and excellent for shouting updates inside the building.
 
 SNS handles the slower, fire-and-forget cross-service events.
-
-Most recently, I have used such a system for **API-triggered work that doesn’t need to happen immediately**, and for **communication across service boundaries**. 
 
 There are many use-cases for harnessing this power:
 
