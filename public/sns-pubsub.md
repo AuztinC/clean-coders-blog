@@ -1,4 +1,4 @@
-# *The Day I Finally Understood PubSub*
+# *Crossing the Single-Process Boundary*
 
 ## **A humble beginning**
 
@@ -144,7 +144,7 @@ Because that small map is carrying far more responsibility than it appears. A su
 
 Speaking of disappearing, There was one more lesson here that didn’t fully land until later: dead-letter queues make the timing visible.
 
-Adding an SQS dead-letter queue to an SNS subscription sounds straightforward on paper. In practice, it’s another place where AWS enforces order without explanation. The queue has to exist first. Permissions have to be attached before the subscription can reference it. The subscription itself must be confirmed before certain attributes can be applied. Get the sequence wrong and AWS doesn’t always reject the request—it simply ignores it.
+Adding an SQS dead-letter queue to an SNS subscription sounds straightforward on paper. In practice, it’s another place where AWS enforces a strict order. The queue has to exist first. Permissions have to be attached before the subscription can reference it. The subscription itself must be confirmed before certain attributes can be applied. Get the sequence wrong and AWS doesn’t always reject the request—it simply ignores it. 
 
 If SNS can’t deliver a message, it will retry. If retries fail and there’s no dead-letter queue, the message can vanish. If a queue policy is missing or misconfigured, delivery can fail silently. From the publisher’s perspective, everything looks fine. The message was “sent.” Somewhere downstream, it simply never arrived.
 
