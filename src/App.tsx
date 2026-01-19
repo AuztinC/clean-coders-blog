@@ -27,7 +27,7 @@ useEffect(()=>{
         <ul>
           {posts.map((post : any, idx : any)=>(
             <li onClick={()=>setSinglePostDate(post.date)} key={idx}>
-              {post.date}
+              {post.title}
             </li>
           ))}
         </ul>
