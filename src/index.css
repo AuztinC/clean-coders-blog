@@ -16,9 +16,9 @@
   --panel: #111827;
   --text: #e5e7eb;
   --muted: #94a3b8;
-  --border: #1f2937;
+  --border: rgb(134, 0, 0);
   --accent: #0d00649e;
-  --accent-soft: rgb(255, 162, 162);
+  --accent-soft: rgb(134, 0, 0);
   --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 

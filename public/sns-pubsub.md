@@ -5,6 +5,7 @@
 Online communication is what drives the modern world. Little packages of information floating from sources like your “Add to cart” button to Amazon’s servers; which respond nearly instantaneously in kind. However; online communication isn’t easy. My first experience with a WebSocket interaction was fairly early in my decision to take learning programming seriously. After learning about Socket.IO one afternoon while looking for learner projects I found myself way in over my head as I tried to piece together Stack Overflow code with my own creation of a ‘Rock-Paper-Scissors’ game so that two users could play together from different web browsers. Many hours later I had my first WebSocket pushing a message and a real console.log() coming through on the other end. By no means was the code “clean code” but the message got through. Transition to building API’s and WebSockets in a beautiful orchestration of data being tossed around in a live service application. I felt as though I understood the system and how it communicated with clients.
 
 Then came the term “Pub/Sub”.
+
  *![Pub/Sub meme](/images/pubsub.png)*
 
 ### **An honest truth**
