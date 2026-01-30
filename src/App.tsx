@@ -1,50 +1,75 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 import blogPosts from './BlogPosts'
 import SinglePost from './SinglePost'
-// import TicTacToe from './TTT'
 import SNSPubsubPost from './SNSPubsubPost'
 import { Routes, Route, useLocation } from 'react-router'
 
-interface Post {
-  title: String,
-  date: String,
-  blog: String,
-  ttt: any
+type Post = {
+  title: string
+  date: string
+  blog: string
 }
 
 function App() {
+  const [singlePostDate, setSinglePostDate] = useState<string>('')
+  const location = useLocation()
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const storedTheme = localStorage.getItem('theme')
+    return storedTheme === 'dark' ? 'dark' : 'light'
+  })
 
-const [singlePostDate, setSinglePostDate] = useState<String>("")
-const [posts, setPosts] = useState<Post[] | any>([])
-const location = useLocation()
-console.log("location:", location.pathname);
+  const posts = useMemo<Post[]>(() => [...blogPosts].reverse(), [])
 
-useEffect(()=>{
-  setPosts(blogPosts.reverse())
-}, [blogPosts])
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
-  return (<div className='wrapper'>
+  return (
+    <div className="layout">
+      {location.pathname !== '/sns-pubsub' ? (
+        <aside className="sidebar">
+          <div className="sidebarHeader">
+            <span className="brandTitle">Austin Cripe's Blog</span>
+            <button
+              className={`themeToggle ${theme === 'light' ? 'themeToggle--dark' : 'themeToggle--light'}`}
+              type="button"
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              aria-label="Toggle color theme"
+            >
+              {theme === 'light' ? 'Dark mode' : 'Light mode'}
+            </button>
+          </div>
+          <ul className="postList">
+            {posts.map((post) => (
+              <li key={post.date}>
+                <button
+                  className={`postLink ${singlePostDate === post.date ? 'isActive' : ''}`}
+                  onClick={() => setSinglePostDate(post.date)}
+                >
+                  <span className="postTitle">{post.title}</span>
+                  <span className="postMeta">{post.date}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      ) : null}
 
-      {posts && location.pathname !== "/sns-pubsub" ?
-        <ul>
-          {posts.map((post : any, idx : any)=>(
-            <li onClick={()=>setSinglePostDate(post.date)} key={idx}>
-              {post.title}
-            </li>
-          ))}
-        </ul>
-     : null}
+      <main className="content">
+        {singlePostDate ? (
+          <SinglePost date={singlePostDate} />
+        ) : location.pathname !== '/sns-pubsub' ? (
+          <div className="emptyState">Select a post to read</div>
+        ) : null}
 
-     {singlePostDate ?
-        <SinglePost date={singlePostDate}/>
-    : null}
-
-       <Routes>
-        <Route path={"/sns-pubsub"} element={<SNSPubsubPost/>} />
-       </Routes>
-
-   </div>)
+        <Routes>
+          <Route path={'/sns-pubsub'} element={<SNSPubsubPost />} />
+        </Routes>
+      </main>
+    </div>
+  )
 }
 
 export default App

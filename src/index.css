@@ -1,29 +1,67 @@
+:root {
+  color-scheme: light;
+  --app-bg: #f5f7fb;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --accent: #4f46e5;
+  --accent-soft: rgba(79, 70, 229, 0.1);
+  --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --app-bg: #0b0f1a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --accent: #0d00649e;
+  --accent-soft: rgb(255, 162, 162);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--app-bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
 .wrapper {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.blogPost {
+.snsPost {
   max-width: 780px;
   margin: 0 auto;
   /* padding: 2rem 1rem; */
   line-height: 1.65;
 }
 
-.blogPost h1, .blogPost h2, .blogPost h3 {
+.snsPost h1, .snsPost h2, .snsPost h3 {
   line-height: 1.1;
   margin: 1.2em 0 0.6em;
 }
 
-.blogPost p {
+.snsPost p {
   margin: 0 0 .5em;
 }
 
-.blogPost ul, .blogPost ol {
+.snsPost ul, .snsPost ol {
   margin: 0 0 1em 1.25em;
 }
 
-.blogPost ol li {
+.snsPost ol li {
     text-align: start;
     width: auto;
     border: none;
@@ -33,32 +71,32 @@
     cursor: default;
 }
 
-.blogPost li {
+.snsPost li {
   margin: 0.35em 0;
 }
 
-.blogPost pre {
+.snsPost pre {
   overflow: auto;
   padding: 1rem;
   border-radius: 8px;
 }
 
-.blogPost code {
+.snsPost code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
-.blogPost pre code {
+.snsPost pre code {
   display: block;
 }
 
-.blogPost blockquote {
+.snsPost blockquote {
   margin: 1em 0;
   padding-left: 1em;
   border-left: 3px solid currentColor;
   opacity: 0.85;
 }
 
-.blogPost img {
+.snsPost img {
   max-width: 100%;
   height: auto;
   margin: 1.5em 0;

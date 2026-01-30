@@ -13,7 +13,7 @@ export default function SNSPubsubPost() {
       }, []);
       console.log("markdownContent:", markdownContent);
     return (
-    <article className="blogPost prose">
+    <article className="snsPost prose">
       <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {markdownContent}
       </ReactMarkdown>
