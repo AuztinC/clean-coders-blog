@@ -15,7 +15,7 @@ type Post = {
 function App() {
   const [singlePostDate, setSinglePostDate] = useState<string>('')
   const location = useLocation()
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     const storedTheme = localStorage.getItem('theme')
     return storedTheme === 'dark' ? 'dark' : 'light'
   })
