@@ -5,6 +5,8 @@ import SinglePost from './SinglePost'
 import SNSPubsubPost from './SNSPubsubPost'
 import TicTacToe from './TTT'
 import { Routes, Route, useLocation, Link } from 'react-router'
+import Featured from './Featured'
+import FeaturedTTT from './FeaturedTTT'
 
 type Post = {
   title: string
@@ -87,41 +89,15 @@ function App() {
           <Routes>
             <Route
               path={'/sns-pubsub'}
-              element={<SNSPubsubPost theme={theme} onToggleTheme={handleToggleTheme} />}
+              element={<SNSPubsubPost/>}
             />
             <Route
               path={'/featured'}
-              element={
-                <section className="featuredPage">
-                  <div className="featuredPageHeader">
-                    <h1>Featured Posts</h1>
-                    <p>Explore longer-form highlights and projects.</p>
-                  </div>
-                  <div className="featuredGrid">
-                    <Link className="featuredCard" to="/sns-pubsub">
-                      <span className="featuredCardTitle">SNS Pub/Sub</span>
-                      <span className="featuredCardMeta">Deep dive</span>
-                    </Link>
-                    <Link className="featuredCard" to="/ttt">
-                      <span className="featuredCardTitle">Let&apos;s Play Tic Tac Toe!</span>
-                      <span className="featuredCardMeta">Interactive</span>
-                    </Link>
-                  </div>
-                </section>
-              }
+              element={<Featured />}
             />
             <Route
               path={'/ttt'}
-              element={
-                <section className="featuredPage">
-                  <div className="featuredPageHeader">
-                    <h1>Let&apos;s Play Tic Tac Toe!</h1>
-                    <p>Step right up! Play a game, here! Can you 'Tic' the almighty 'Tac'!? Only 'Toe' can tell.</p>
-                  </div>
-                  <div className="featuredCard featuredCard--wide">
-                    <TicTacToe />
-                  </div>
-                </section>
+              element={<FeaturedTTT />
               }
             />
           </Routes>
