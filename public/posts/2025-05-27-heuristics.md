@@ -1,0 +1,6 @@
+---
+title: "Heuristics"
+date: "2025-05-27"
+---
+
+Approaching the 3d version of tic-tac-toe was very intimidating. Knowing that minimax will only work up to a certain depth had me jumping to solve this with heuristics. Thinking about what the AI player will need, I started with a win/block check function that would allow the AI to snap to block when you are set up for a winning move. This was a promising start that lead me to building other systems that will score the game differently, based on how many spots a given player has filled, where a two in a row has a higher value than one. This problem is very challenging due to the forks. I have made a function that will check if the opponent has a chance to place into a position. This is only looking one turn ahead right now and leading me to be able to win if I am the starting player. The AI will not let me win if it starts the game, always resulting in a tie or the AI winning. After playing with depth for minimax and trying different fork ideas, I have run into a wall. The idea of creating a heuristic based AI is working, I just can't land the finishing touch and am finding myself going in circles in my code. Tomorrow is a new opportunity to solve this problem and I greatly look forward to the feeling when it is solved.

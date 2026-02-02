@@ -1,0 +1,6 @@
+---
+title: "Accepting the cookie"
+date: "2025-07-29"
+---
+
+After spending far too long dealing with dropped state while transfering the flow from query parameters to cookie + game ID, I gave up. Realizing that the clock was still ticking and very little progress was being made it was time to accept the position that I was in. I knew how to make the game work using the cookie, I had stumbled upon this previously and though to myself 'there has got to be a way to utilize the database'. Of course, there definitely was and still is a way to change the way my game is receiving its state. Simply doing the process out of order for too long left me feeling like there was no real need to make the change anyways. The task at hand was to play tic tac toe on the web, using my previous games functions and logic. While I was using the cookie to store the game, the game was still being pulled from the project as a library extension. Therefore, the task was complete. This just left me with fulfilling the last of the screens, the replay and continue. These came together quickly with some simple tests to assert the html was correct, and then followed by a test against the interaction handler to make sure the screen state transfered properly.

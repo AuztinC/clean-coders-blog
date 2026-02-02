@@ -1,0 +1,6 @@
+---
+title: "DIP in action"
+date: "2025-07-22"
+---
+
+The importance of the SOLID principle have become more revealing to me as I have continued to build slightly more complex projects. Watching a real example of the Dependency Inversion principle in action was awesome to see and eye opening. The fact that my tests were relying on the Thread.sleep function would cause the tests to have a delay each time. When creating the tests I was focusing on getting the intended behavior out of my business logic and didn't stop to think about this coupling. Using the Dependency Inversion principle helped to remove the need for slow tests entirely! Creating a common interface that will have a real implementation that does actually call the Thread.sleep function keeps gives my server the ability to still utilize the sleep function while the tests can implement the same interface, only this time it can simply hold the value that we will pass the the sleep function. This ensures the tests are fast while still allowing the assertion that the interface will properly pass the given time.

@@ -1,0 +1,6 @@
+---
+title: "Wrapped up"
+date: "2025-07-14"
+---
+
+I thought I had a clear vision going into today. Over the weekend I added some tests to force me to add the code to start up a server. I could then use this to make sure that the server socket will see what port its being run on. While trying to come up with a solution on how to make proper tests with the client socket, I decided to make a StubSocket class that would extend a regular Socket and override the two main functions that I am concerned with, 'getOutputStream' and 'getInputStream'. Starting the process left me with some questions. Reaching out and meeting with Alex it was clear that while my intentions on the direction of the server was in good heart. The actions I was taking were not creating a cleancode project. Violating some of the SOLID principles along the way and not even catching them. We spent a good amount of time with me bassically admitting my confusion. After Alex was kind enough to point me in a pretty specific direction, he let me loose to fulfil some tests. I got confused again. At this point I'm not even sure what I am confused about specifically. I'm just feeeling overwhelmed with the whole process and conforming to the principles and the new language.

@@ -1,0 +1,12 @@
+---
+title: "Rehearse the verse"
+date: "2025-04-17"
+---
+
+During my rehearsing today I decided to grab a prop and bring my past experiences into the presentation. I'm excited to share some laughs with the team and get to play a game after as well. After rehearsing a few times I went over some previous euler problems that I have completed as a refresher. I am proud of the work I have done so far, the progress with clojure has been tough and I know there will be other hard challenges and concepts to grasp. Completing euler 8 today put me on cloud nine for a bit, it felt like a problem I was ready for because of the method in which I solved a previous euler was very similar.
+
+Finding the 10,001st prime number was the challenge. I set off with an empty test suite and a full stomach. First, I needed a function to check for prime numbers, and so it was done. Using a range starting from 2, I started the pointer at 3 to begin the checking. Using a function that passed the current number to check and also the collection of previously recorded prime numbers, the checks were made rather quickly. Giving the input a max-depth of 10,001 I was able to achieve success and getting the prime in question.
+
+After a short break from the first euler, I dove into the second one of the day. Finding the 13 adjecent digits that had the greatest product, out of a 1000 digit number. This one was tricky at first, I was struggling to get the numbers broken into a collection, but still remain numbers. Stumbling through solutions, I found edn/read-string to be useful while maping over the collection of the numbers that are already split into individual strings. This gave me the number that I could then use in a loop with a pointer and max-product. Each iteration the function will drop up to the pointers number, take 13 from that position and calculate the product of them. This is compared to the previous max-product and replaced when needed. This solution works, but I am looking forward to going back and refactoring all of these problem's solutions. The IPM had me slightly nervous about my ability to complete everything, but I believe that I am making really great progress so far.
+
+Exciting day today solving problem and making my brain feel huge. A great feeling!

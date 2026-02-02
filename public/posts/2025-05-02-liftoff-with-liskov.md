@@ -1,0 +1,10 @@
+---
+title: "Liftoff with Liskov!"
+date: "2025-05-02"
+---
+
+The Liskov substitution principle was for some odd reason what felt like an intimidating concept on the surface. Maybe it was just because there was two whole videos on the subject in the SOLID series with Uncle Bob. However once I had dug into the topic and got a fuller understanding on the idea did I come to see it for what it is. Making sure that all of your extensions from a type or class are fully committed to fulfilling to contract that it has taken on by extending off of the original class. Not breaking the expectation of what a system is expecting from a function. Being consistent with your types and returns.
+
+Bowling has become a much more comfortable process. A short program that consists of a few if statements and a loop to tally the score of a given list of rolls. The roll-many function that is used to test a given list of input vectors with rolls and pins got way over complicated my first go through. Trying to create a loop system looking through each vector and keeping track of things in a recursive way. After slowing down to consider the problem and what I really needed, I realized the repeat function that I used to initiate the first set of rolls (20 0) was the key! I could go through a list of vectors with a for loop and create sub sequences with the first amount of the second value, within each given vector. example being [[20 0]] would give us 20 0's, as before. But we can now enhance and build fuller games with this system such as [[15 1] [5 2]] can result in a game of 25 from adding fifteen 1's and five 2's. This can be fully utilized by flattening the output of the for and using this for score-game.
+
+Thankful for the help refactoring again today and look forward to showing projects where I have done the refactoring first, because I see those things while building it. A great day of presenting and getting feedback. Grateful for another week!

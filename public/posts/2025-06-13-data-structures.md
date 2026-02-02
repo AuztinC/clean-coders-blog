@@ -1,0 +1,6 @@
+---
+title: "Data Structures"
+date: "2025-06-13"
+---
+
+ArrayList and LinkedList, two different ways to solve similar problems. Both of these implement the List interface in Java and use the same methods but ultimately work rather differently behind the scenes. An ArrayList is similar to a typical array. Carrying the same features with methods that will let you add, remove, get, and check for size. These methods allow for internal resize when exceeding the original List's size. On the other hand, we have a LinkedList. This type of list will also carry these same methods, and allow for internal resize even. The big difference here is how the array is being built behind the curtain. A LinkedList will create a new object for each position in the List, called a Node. Starting from the 'head' of the list, each node will have a reference to the next. This sort of a list will allow for quick removal of elements by changing these reference points. Creating these implementations of a List has been a great way to really understand these data structures better, and when they might be useful.

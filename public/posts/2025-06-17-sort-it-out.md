@@ -1,0 +1,12 @@
+---
+title: "Sort it out"
+date: "2025-06-17"
+---
+
+Quick sort can be really great! It also can be signifcantly worse than merge if the algorithm is given the wrong type of list. After spending a good amount of time researching the algorithm and looking at the different ways of partitioning. I implemented a quick sort using the list methods that I had available to me given the initial List interface. The quicksort function itself is a rather small function that will recurse on a new pivot point every iteration. This function will send the list along with a start and end to the section of the list that will be handled next. The partition function takes over now and does the actual checking of each element's value against the pivot's, swapping them when necessary.
+
+Setting this function up didn't take too long for me today after having a better understanding of how to properly remove and re-add elements into place. However, once it was in place I decided to try and test the speeds of these. This is where I ran into a problem. Initially having set up my tests to have an already sorted 1000 numbers, I was confused why bubble sort and merge sort were so similar in speed. Right away I was worried about the speed of quick sort. Taking somewhere around 7x longer to finish that the other two algorithms was alarming.
+
+After realizing my error in giving an already sorted array, that was quickly fixed with random numbers instead. This immediately showed the false speed of the bubble sort from before. Now taking much longer than the other two. But there was still a problem. Quick sort was still taking longer than merge sort and for an ArrayList, this shouldn't be the case. Finding my implementation methods being the cause of the slowdown, I was able to add a set() method that greatly increased the speed in the ArrayList case. Now, I believe the three algorithms are working properly and the test timers are showing results that I believe are correct for the cases. I am looking forward to meeting with my mentor to confirm this and get some more ideas about possible refactors or tests.
+
+This week has started off really great and gave me some confidence in another language which feels very good!

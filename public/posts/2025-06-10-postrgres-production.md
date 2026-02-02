@@ -1,0 +1,10 @@
+---
+title: "Postrgres Production"
+date: "2025-06-10"
+---
+
+Being able to run my little game on a real database is a great feeling. Introducing a postgres option was not a simple feat. It introduced the need for a whole new test suite and even helped me find functionality that wasn't fully tested prior to this feature. Splitting all of my large functions relying on a case function into multimethods really helped seperate abstractions and really helped me understand how to dispatch on a single parameter.
+
+Getting more comforatble with the process of SQL within my Clojure project has been really fun and helps me to get a better idea of the interaction I may have in the future with data. Thinking about the layout of the schema, I decided to stick with a large JSONB object for my postgres storage. I did this thinking that it would make for the simplest transition from my previous edn file implementation. This was not true and ended up leaving me with a bug somewhere in my creating a new ID for new games process. Once I had gotten to a point that I felt was a solid structure with plenty of tests, I decided to try moving all of these psql functions to their own namespace. A surprisingly longer time than expected had past by the time I'd gotten almost all but one or two functnions moved. At some point in te process, while having a green light for me tests, I thought I should boot up a game to watch it run again. This quickly showed me an error because of some disconnect. Not sure what to do and it being late already I simply left my functions in the previous file and will have to explain why during my IPM.
+
+Waking up early and fixing this bug with my ID creation is a big priority. Still a really fun day of handling something that felt more like a real world problem, of sorts. Looking forward to showing my mentor at the meeting tomorrow.

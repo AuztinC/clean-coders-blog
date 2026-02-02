@@ -1,0 +1,8 @@
+---
+title: "Repition, young grasshopper"
+date: "2025-04-11"
+---
+
+Fizzbuzz is definitely on the brain. It is a fun challenge that I like to totally erase from memory before attempting again if possible. I am able to think the problem through and make my way through each test successfully. Knowing what you want out of a function ahead of time can make the process of testing feel a little redundent, but once you have them in place it is nice to not wonder if the function will break. From using terminal to create the project and open IntelliJ to printing out the final output with lein run -m, I am getting confident in the process.
+
+I am happy to have the repitition as a task. While I have been doing practice problems on my own, it helps to a reason to make the project, use the tools, run the tests and commands. After watching and completing another couple videos and exams I am becoming a more well equipped designer and developer. Many lessons that included information like Architecture and the importance of laying out the foundation of a software system, Developing apps driven by independent use-cases, and the disgust of design smells due to fragility, rigidity, and needless complexity. These and many others today involving the importance of interface segregation, the Single Use Principle, and the Dependancy Inversion Principle are huge take-aways for me today. I will be studying these lessons before designing my next system.
