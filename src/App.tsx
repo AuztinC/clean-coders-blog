@@ -1,16 +1,16 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-import blogPosts from './BlogPosts'
 import SinglePost from './SinglePost'
 import SNSPubsubPost from './SNSPubsubPost'
 import { Routes, Route, useLocation, Link } from 'react-router'
 import Featured from './Featured'
 import FeaturedTTT from './FeaturedTTT'
+import { parseMarkdown, postsIndex } from './posts'
 
 type Post = {
   title: string
   date: string
-  blog: string
+  sortKey: string
 }
 
 function App() {
@@ -23,12 +23,42 @@ function App() {
   const isHome = location.pathname === '/'
   const isFeatured = location.pathname === '/featured'
 
-  const posts = useMemo<Post[]>(() => [...blogPosts].reverse(), [])
+  const [posts, setPosts] = useState<Post[]>([])
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
   }, [theme])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const postEntries = Object.entries(postsIndex)
+    Promise.all(
+      postEntries.map(([dateKey, filename]) =>
+        fetch(`/posts/${filename}`)
+          .then((res) => res.text())
+          .then((text) => {
+            const parsed = parseMarkdown(text)
+            return {
+              title: parsed.title || filename,
+              date: dateKey,
+              sortKey: filename,
+            }
+          })
+          .catch(() => null)
+      )
+    ).then((results) => {
+      if (!isMounted) return
+      const resolvedPosts = results.filter((post): post is Post => post !== null)
+      resolvedPosts.sort((a, b) => a.sortKey.localeCompare(b.sortKey))
+      setPosts(resolvedPosts.reverse())
+    })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const handleToggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
