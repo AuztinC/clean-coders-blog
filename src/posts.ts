@@ -98,6 +98,7 @@ export const postsIndex: Record<string, string> = {
   "8-7-25": "2025-08-07-finite-state-machines.md",
   "8-8-2025": "2025-08-08-sitar-friday.md",
   "8-11-25": "2025-08-11-visitors!.md",
+  "2-3-2026": "2026-02-03-ttt-in-wow.md"
 }
 
 export const parseMarkdown = (content: string): Post => {

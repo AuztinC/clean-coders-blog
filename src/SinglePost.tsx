@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
 import TicTacToe from "./TTT"
 import { parseMarkdown, postsIndex, type Post } from "./posts"
 // import { useParams } from "react-router"
@@ -30,16 +32,9 @@ export default function SinglePost (props: Props) {
     return (<><div className="blogPost">
                 <h1>{singlePost.title}</h1> <br/>
                 {singlePost.date}  <br/>
-                {singlePost.blog.split(/\n\s*\n/).map((paragraph, paragraphIndex) => (
-                  <p key={paragraphIndex}>
-                    {paragraph.split("\n").map((line, lineIndex, lines) => (
-                      <span key={lineIndex}>
-                        {line}
-                        {lineIndex < lines.length - 1 ? <br/> : null}
-                      </span>
-                    ))}
-                  </p>
-                ))}
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {singlePost.blog}
+                </ReactMarkdown>
                 {showTicTacToe ? <TicTacToe/> : null}
             </div>
             </>)
