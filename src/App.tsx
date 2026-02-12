@@ -6,6 +6,8 @@ import { Routes, Route, useLocation, Link } from 'react-router'
 import Featured from './Featured'
 import FeaturedTTT from './FeaturedTTT'
 import { parseMarkdown, postsIndex } from './posts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAnglesRight, faAnglesDown } from '@fortawesome/free-solid-svg-icons'
 
 type Post = {
   title: string
@@ -15,6 +17,7 @@ type Post = {
 
 function App() {
   const [singlePostDate, setSinglePostDate] = useState<string>('')
+  const [isPostsOpen, setIsPostsOpen] = useState(true)
   const location = useLocation()
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     const storedTheme = localStorage.getItem('theme')
@@ -88,11 +91,19 @@ function App() {
 
       <div className={`layout ${isHome ? '' : 'layout--full'}`}>
         {isHome ? (
-          <aside className="sidebar">
+          <aside className={`sidebar ${isPostsOpen ? '' : 'sidebar--collapsed'}`}>
             <div className="sidebarHeader">
               <span className="brandTitle">Posts</span>
+              <button
+                className="sidebarToggle"
+                type="button"
+                onClick={() => setIsPostsOpen((prev) => !prev)}
+                aria-expanded={isPostsOpen}
+                aria-controls="post-list">
+                {isPostsOpen ? <FontAwesomeIcon icon={faAnglesDown} /> : <FontAwesomeIcon icon={faAnglesRight} />}
+              </button>
             </div>
-            <ul className="postList">
+            <ul id="post-list" className="postList">
               {posts.map((post) => (
                 <li key={post.date}>
                   <button
