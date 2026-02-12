@@ -48,30 +48,6 @@
   background: var(--accent-soft);
 }
 
-ul{
-  border: 1px solid black;
-  padding: 0px;
-  max-width: 10vw;
-  max-height: 90vh;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: scroll;
-}
-
-li{
-  text-align: center;
-  width: 10vw;
-  padding: 15px;
-  white-space: pre-wrap;
-  border: 1px solid black;
-  background-color:rgb(230, 230, 230);
-  margin-top: 10px;
-  cursor: pointer;
-}
-
 .blogPost {
   width: 80vw;
   margin: 5%;
@@ -107,7 +83,7 @@ iframe {
 .sidebar {
   position: sticky;
   top: 2rem;
-  height: calc(100vh - 4rem);
+  height: calc(95vh - 6rem);
   /* overflow: auto; */
   padding: 1.5rem;
   background: var(--panel);
@@ -165,11 +141,11 @@ iframe {
   padding: 0;
   margin: 1.5rem 0 0;
   max-width: 100%;
-  height: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  /* display: flex;
-  flex-direction: column; */
   gap: 0.75rem;
 }
 
@@ -214,7 +190,7 @@ iframe {
 
 .content {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   padding: 1rem 0;
   min-height: 0;
@@ -242,6 +218,17 @@ iframe {
 .blogPost img {
   max-width: 100%;
   border-radius: 10px;
+}
+
+.blogPost pre {
+  max-width: 100%;
+  overflow: auto;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.blogPost pre code {
+  display: block;
 }
 
 .snsPost {
@@ -378,6 +365,11 @@ iframe {
 
   .content {
     padding: 0;
+  }
+
+  .postList {
+    height: auto;
+    max-height: 60vh;
   }
 }
 
